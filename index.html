@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ranking Squash CV</title>
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ranking-container {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            margin: 2px 0 0;
+            opacity: 0.9;
+            font-size: 12px;
+        }
+
+        /* --- CONTROLES --- */
+        .controls {
+            padding: 10px;
+            background-color: #eee;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        select,
+        #searchInput {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background-color: white;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* --- TABLA PRINCIPAL --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            padding: 10px 8px;
+            text-align: left;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #444;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            border-bottom: 2px solid #ddd;
+            letter-spacing: 0.5px;
+        }
+
+        tr {
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .col-rank {
+            width: 8%;
+        }
+
+        .col-name {
+            width: 35%;
+        }
+
+        .col-nt {
+            width: 8%;
+        }
+
+        .col-pts {
+            width: 12%;
+        }
+
+        .col-club {
+            width: 27%;
+        }
+
+        .col-btn {
+            width: 10%;
+        }
+
+        .rank-1 {
+            background-color: #fffbe6 !important;
+            border-left: 4px solid #ffd700;
+        }
+
+        .rank-2 {
+            background-color: #f4f6f7 !important;
+            border-left: 4px solid #c0c0c0;
+        }
+
+        .rank-3 {
+            background-color: #fffbf5 !important;
+            border-left: 4px solid #cd7f32;
+        }
+
+        .rank-badge {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            color: #555;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .rank-1 .rank-badge {
+            background-color: #ffd700;
+            color: #fff;
+        }
+
+        .rank-2 .rank-badge {
+            background-color: #c0c0c0;
+            color: #fff;
+        }
+
+        .rank-3 .rank-badge {
+            background-color: #cd7f32;
+            color: #fff;
+        }
+
+        .points {
+            font-weight: 700;
+            color: #1e3c72;
+        }
+
+        .tournaments {
+            font-weight: 600;
+            color: #555;
+            background: #eee;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 11px;
+        }
+
+        .club {
+            color: #666;
+            font-size: 13px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+
+        .top10-badge {
+            background-color: #d32f2f;
+            color: white;
+            font-size: 9px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+            vertical-align: middle;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .clickable-name {
+            cursor: pointer;
+            color: #1e3c72;
+            text-decoration: none;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .clickable-name:hover {
+            color: #d32f2f;
+            border-bottom: 1px solid #d32f2f;
+        }
+
+        .btn-profile {
+            background-color: white;
+            border: 1px solid #2a5298;
+            color: #2a5298;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.2s;
+        }
+
+        .btn-profile:hover {
+            background-color: #2a5298;
+            color: white;
+            box-shadow: 0 2px 5px rgba(42, 82, 152, 0.3);
+        }
+
+        /* --- MODAL --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 900px;
+            height: 85vh;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            color: #333;
+            cursor: pointer;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+        }
+
+        .modal-body-grid {
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .profile-sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            border-right: 1px solid #ddd;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .profile-pic-large,
+        .profile-avatar-large {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .profile-pic-large {
+            object-fit: cover;
+        }
+
+        .profile-avatar-large {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .sidebar-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e3c72;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .sidebar-club {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .sidebar-badge {
+            background: #d32f2f;
+            color: white;
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            margin-top: 8px;
+            display: inline-block;
+        }
+
+        .sidebar-stats {
+            width: 100%;
+            margin-top: 30px;
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-key {
+            color: #888;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .profile-main {
+            flex-grow: 1;
+            padding: 40px;
+            overflow-y: auto;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .bio-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .bio-label {
+            display: block;
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .bio-value {
+            display: block;
+            font-size: 16px;
+            font-weight: 800;
+            color: #1e3c72;
+        }
+
+        .tournament-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+
+        .tournament-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-color: #ccc;
+        }
+
+        .t-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .t-date {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .t-name {
+            font-weight: 700;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .t-result {
+            text-align: right;
+        }
+
+        .t-pos {
+            display: block;
+            font-size: 18px;
+            font-weight: 800;
+            color: #1e3c72;
+        }
+
+        .t-pts {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .pos-1 {
+            color: #d4af37;
+        }
+
+        .pos-2 {
+            color: #a9a9a9;
+        }
+
+        .pos-3 {
+            color: #cd7f32;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .ranking-container {
+                border-radius: 0;
+            }
+
+            .col-club,
+            td:nth-child(5) {
+                display: none;
+            }
+
+            th,
+            td {
+                padding: 8px 4px;
+                font-size: 13px;
+            }
+
+            .col-rank {
+                width: 10%;
+            }
+
+            .col-name {
+                width: 45%;
+            }
+
+            .col-nt {
+                width: 10%;
+            }
+
+            .col-pts {
+                width: 15%;
+            }
+
+            .col-btn {
+                width: 20%;
+            }
+
+            .top10-badge {
+                display: block;
+                width: fit-content;
+                margin: 2px 0 0 0;
+            }
+
+            .modal-content {
+                height: 100%;
+                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .modal-body-grid {
+                flex-direction: column;
+                overflow-y: auto;
+            }
+
+            .profile-sidebar {
+                width: 100%;
+                padding: 20px;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .profile-main {
+                padding: 20px;
+            }
+
+            .bio-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+            }
+
+            .bio-value {
+                font-size: 13px;
+            }
+        }
+
+        /* =========================================
+           --- FACE TO FACE ---
+           ========================================= */
+        .btn-f2f {
+            padding: 8px 16px;
+            font-size: 14px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-f2f:hover {
+            background: linear-gradient(135deg, #2a5298, #3a6bc4);
+            box-shadow: 0 3px 10px rgba(42, 82, 152, 0.4);
+            transform: translateY(-1px);
+        }
+
+        /* Modal F2F */
+        #f2fModal {
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        .f2f-content {
+            background: #0d2137;
+            width: 100%;
+            max-width: 1100px;
+            max-height: 90vh;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .f2f-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #0d2137 100%);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .f2f-header h2 {
+            color: white;
+            margin: 0;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .f2f-body {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .f2f-arena {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0;
+            padding: 30px 20px 20px;
+        }
+
+        .f2f-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .f2f-player-right {
+            align-items: center;
+        }
+
+        .f2f-search-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .f2f-search-input {
+            width: 100%;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .f2f-search-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .f2f-search-input:focus {
+            border-color: #4a90e2;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .f2f-dropdown {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            right: 0;
+            background: #1a3a5c;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .f2f-dropdown-item {
+            padding: 10px 14px;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.15s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .f2f-dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .f2f-dropdown-item:hover {
+            background: rgba(74, 144, 226, 0.3);
+        }
+
+        .f2f-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: 800;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.15);
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        .f2f-name {
+            font-size: 16px;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .f2f-club-tag {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+
+        .f2f-placeholder {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 28px;
+        }
+
+        .f2f-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 0 20px;
+        }
+
+        .f2f-scoreboard {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .f2f-score {
+            font-size: 52px;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+        }
+
+        .f2f-score-label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* SVG donut */
+        .f2f-donut-wrap {
+            position: relative;
+            width: 90px;
+            height: 90px;
+        }
+
+        .f2f-donut-wrap svg {
+            transform: rotate(-90deg);
+        }
+
+        .f2f-donut-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .f2f-donut-label span {
+            display: block;
+            font-size: 10px;
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+
+        .f2f-matches-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+        }
+
+        /* Historial */
+        .f2f-history {
+            padding: 0 20px 20px;
+        }
+
+        .f2f-history-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .f2f-match-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: background 0.2s;
+        }
+
+        .f2f-match-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .f2f-match-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .f2f-match-event {
+            font-size: 13px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .f2f-match-date {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+        }
+
+        .f2f-match-result {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .f2f-winner-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #4ade80;
+        }
+
+        .f2f-score-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .f2f-empty {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.3);
+            padding: 30px;
+            font-size: 14px;
+        }
+
+        .f2f-select-prompt {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .f2f-content {
+                max-height: 96vh;
+                margin: 0 8px;
+                width: auto;
+                border-radius: 12px;
+            }
+
+            .f2f-header {
+                padding: 12px 16px;
+            }
+
+            .f2f-header h2 {
+                font-size: 15px;
+            }
+
+            .f2f-arena {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                gap: 16px;
+                padding: 18px 15px 10px;
+            }
+
+            .f2f-center {
+                order: -1;
+                margin-bottom: 4px;
+            }
+
+            .f2f-score {
+                font-size: 36px;
+            }
+
+            .f2f-donut-wrap,
+            .f2f-donut-wrap svg {
+                width: 70px;
+                height: 70px;
+            }
+
+            .f2f-avatar,
+            .f2f-placeholder {
+                width: 70px;
+                height: 70px;
+                font-size: 24px;
+            }
+
+            .f2f-search-input {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .f2f-name {
+                font-size: 14px;
+            }
+
+            .f2f-club-tag {
+                font-size: 11px;
+                margin-top: -2px;
+            }
+
+            .f2f-history {
+                padding: 0 15px 30px;
+            }
+
+            .f2f-history-title {
+                padding-top: 5px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ranking-container">
+        <div class="header">
+            <h1>Ranking Squash CV</h1>
+            <p>Federación de Squash de la Comunidad Valenciana</p>
+            <p id="headerYearTitle" style="font-weight: bold; margin-top: 5px; font-size: 14px; color: #ffeb3b;">
+                Año 2026</p>
+        </div>
+
+        <div class="controls">
+            <select id="yearSelect" onchange="loadCategory()">
+                <option value="2026">Año 2026</option>
+                <option value="2025">Año 2025</option>
+            </select>
+            <select id="categorySelect" onchange="loadCategory()">
+                <option value="cat1">1ª Categoría Masculina</option>
+                <option value="cat2">2ª Categoría Masculina</option>
+                <option value="catFem">1ª Categoría Femenina</option>
+                <option value="catJun">Categoría Junior</option>
+            </select>
+            <input type="text" id="searchInput" onkeyup="filterPlayers()" placeholder="Buscar jugador...">
+            <button class="btn-f2f" onclick="openF2F()">⚔️ Face to Face</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-rank text-center">#</th>
+                    <th class="col-name">Jugador</th>
+                    <th class="col-nt text-center">T.</th>
+                    <th class="col-pts text-center">Pts</th>
+                    <th class="col-club">Club</th>
+                    <th class="col-btn text-center">Ficha</th>
+                </tr>
+            </thead>
+            <tbody id="rankingBody">
+                <tr>
+                    <td colspan="6" id="loadingMsg" class="text-center" style="padding:30px;color:#888;font-size:16px;">
+                        ⏳ Cargando datos...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- MODAL FACE TO FACE -->
+    <div id="f2fModal" class="modal-overlay" style="display:none;" onclick="closeF2FModal(event)">
+        <div class="f2f-content">
+            <div class="f2f-header">
+                <h2>⚔️ Face to Face</h2>
+                <span class="close-modal" onclick="closeF2FModalButton()"
+                    style="position:static;background:rgba(255,255,255,0.1);color:white;">×</span>
+            </div>
+            <div class="f2f-body">
+                <div class="f2f-arena">
+                    <!-- Jugador 1 -->
+                    <div class="f2f-player">
+                        <div class="f2f-search-wrap">
+                            <input type="text" class="f2f-search-input" id="f2fSearch1"
+                                placeholder="🔍 Buscar jugador..." oninput="f2fFilter(1)" autocomplete="off">
+                            <div class="f2f-dropdown" id="f2fDrop1"></div>
+                        </div>
+                        <div id="f2fAvatar1" class="f2f-placeholder">👤</div>
+                        <div id="f2fName1" class="f2f-name f2f-select-prompt">Selecciona jugador</div>
+                        <div id="f2fClub1" class="f2f-club-tag"></div>
+                    </div>
+
+                    <!-- Centro: marcador -->
+                    <div class="f2f-center">
+                        <div class="f2f-scoreboard">
+                            <div style="text-align:center">
+                                <div id="f2fWins1" class="f2f-score">-</div>
+                                <div class="f2f-score-label">Victorias</div>
+                            </div>
+                            <div class="f2f-donut-wrap">
+                                <svg width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="45" cy="45" r="38" fill="none" stroke="rgba(255,255,255,0.1)"
+                                        stroke-width="8" />
+                                    <circle id="f2fDonut1" cx="45" cy="45" r="38" fill="none" stroke="#e74c3c"
+                                        stroke-width="8" stroke-dasharray="0 239" stroke-linecap="round"
+                                        style="transition:stroke-dasharray 0.6s ease" />
+                                    <circle id="f2fDonut2" cx="45" cy="45" r="38" fill="none" stroke="#2980b9"
+                                        stroke-width="8" stroke-dasharray="0 239" stroke-linecap="round"
+                                        stroke-dashoffset="0" style="transition:stroke-dasharray 0.6s ease" />
+                                </svg>
+                                <div class="f2f-donut-label">
+                                    <span id="f2fDonutLabel">VS</span>
+                                </div>
+                            </div>
+                            <div style="text-align:center">
+                                <div id="f2fWins2" class="f2f-score">-</div>
+                                <div class="f2f-score-label">Victorias</div>
+                            </div>
+                        </div>
+                        <div id="f2fMatchesLabel" class="f2f-matches-label">Selecciona dos jugadores</div>
+                    </div>
+
+                    <!-- Jugador 2 -->
+                    <div class="f2f-player f2f-player-right">
+                        <div class="f2f-search-wrap">
+                            <input type="text" class="f2f-search-input" id="f2fSearch2"
+                                placeholder="🔍 Buscar jugador..." oninput="f2fFilter(2)" autocomplete="off">
+                            <div class="f2f-dropdown" id="f2fDrop2"></div>
+                        </div>
+                        <div id="f2fAvatar2" class="f2f-placeholder">👤</div>
+                        <div id="f2fName2" class="f2f-name f2f-select-prompt">Selecciona jugador</div>
+                        <div id="f2fClub2" class="f2f-club-tag"></div>
+                    </div>
+                </div>
+
+                <!-- Historial de partidos -->
+                <div class="f2f-history">
+                    <div class="f2f-history-title">Historial de enfrentamientos</div>
+                    <div id="f2fHistory">
+                        <div class="f2f-empty">Selecciona dos jugadores para ver sus enfrentamientos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="profileModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="close-modal" onclick="closeModalButton()">×</div>
+            <div class="modal-body-grid">
+                <div class="profile-sidebar">
+                    <div id="modalImageContainer"></div>
+                    <h2 id="modalName" class="sidebar-name">Nombre</h2>
+                    <div id="modalClub" class="sidebar-club">Club</div>
+                    <div id="modalBadgeContainer"></div>
+                    <div class="sidebar-stats">
+                        <div class="stat-row">
+                            <span class="stat-key">Ranking</span>
+                            <span id="modalRank" class="stat-value">#1</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-key">Puntos</span>
+                            <span id="modalPoints" class="stat-value">1000</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-key">Torneos</span>
+                            <span id="modalTournaments" class="stat-value">5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main">
+                    <div class="section-title">Datos Personales</div>
+                    <div class="bio-grid">
+                        <div class="bio-item">
+                            <span class="bio-label">Fecha Nacimiento</span>
+                            <span id="bioBirthDate" class="bio-value">-</span>
+                        </div>
+                        <div class="bio-item">
+                            <span class="bio-label">Edad</span>
+                            <span id="bioAge" class="bio-value">-</span>
+                        </div>
+                        <div class="bio-item">
+                            <span class="bio-label">Club</span>
+                            <span id="bioClubModal" class="bio-value">-</span>
+                        </div>
+                    </div>
+
+                    <div class="section-title" id="yearTitleModal">Resultados Año 2026</div>
+                    <div id="modalHistoryList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos embebidos directamente (sin fetch externo)
+        const INLINE_DATA = {"2025":{"cat1":[{"name":"Guillermo Pedernera","points":1700,"club":"Club Squash Valencia","birthDate":"1985-03-22","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"3º","points":200},{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"2º","points":250},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"3º","points":200},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"1º","points":300},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"2º","points":500}]},{"name":"Javier Castillo","points":1230,"club":"-","birthDate":"1998-11-10","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"5º","points":120},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"8º","points":60},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"6º","points":100},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"6º","points":100},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"1º","points":600}]},{"name":"Adrian Revert","points":1040,"club":"Club Squash Algemesí","isTop10Spain":true,"nationalRank":10,"realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"2º","points":250},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"3º","points":200},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"2º","points":250},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"4º","points":170},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"4º","points":170},{"date":"NORMATIVA","event":"<b>Nº 2 Directo:</b> Top 10 Ranking Nacional (RN 9)","pos":"-","points":"-"}]},{"name":"Guillermo Mongé","points":995,"club":"Club Squash Valencia","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"6º","points":100},{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"6º","points":100},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"2º","points":250},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"4º","points":170},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"5º","points":120},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"9º","points":55},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"5º","points":200}]},{"name":"Jamie Williams","points":715,"club":"Club Squash Valencia","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"7º","points":70},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"5º","points":120},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"9º","points":55},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"7º","points":70},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"3º","points":400}]},{"name":"Toni Molina Vera","nationalRank":59,"points":685,"club":"Club Squash Valencia","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"4º","points":170},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"4º","points":170},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"13º","points":35},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"8º","points":110}]},{"name":"Ernesto Revert","points":600,"club":"Åsane Squash Klubb","isTop10Spain":true,"nationalRank":7,"birthDate":"1994-05-15","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"1º","points":300},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"1º","points":300},{"date":"NORMATIVA","event":"<b>Nº 1 Directo:</b> Top 10 Ranking Nacional (RN 6)","pos":"-","points":"-"}]},{"name":"Robertino Pezzota","points":600,"club":"-","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"1º","points":300},{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"1º","points":300}]},{"name":"Alex Boni","nationalRank":42,"points":500,"club":"Club Squash Valencia","realHistory":[{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"3º","points":200},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"1º","points":300}]},{"name":"Pablo Sanchis Tatay","nationalRank":59,"points":490,"club":"Club Squash Algemesí","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"10º","points":50},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"4º","points":240}]},{"name":"Daniel Tarazona Cebollada","points":460,"club":"Club Squash Valencia","realHistory":[{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"5º","points":460}]},{"name":"Telmo Ildefonso","points":445,"club":"Club Squash Valencia","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"8º","points":60},{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"9º","points":55},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"7º","points":70},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"5º","points":120},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"6º","points":140}]},{"name":"Pablo de Grado","points":385,"club":"-","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"11º","points":45},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"7º","points":70},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"6º","points":100},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"10º","points":50},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"7º","points":120}]},{"name":"Alejandro Sanchez Sabido","points":295,"club":"-","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"9º","points":55},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"5º","points":120},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"8º","points":60},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"8º","points":60}]},{"name":"Mario Miralles Jordan","points":170,"club":"-","realHistory":[{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"4º","points":170}]},{"name":"Paco Miró","nationalRank":75,"points":170,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"11º","points":45},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"11º","points":45},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"9º","points":80}]},{"name":"Jacobo Montava","points":150,"club":"Club Olympia Alcoy","realHistory":[{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"9º","points":55},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"10º","points":50},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"11º","points":45}]},{"name":"Victor Rodríguez","points":140,"club":"Cuenca Squash Club","realHistory":[{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"7º","points":70},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"7º","points":70}]},{"name":"Rubén Avendaño","points":135,"club":"-","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"13º","points":35},{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"10º","points":50},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"10º","points":50}]},{"name":"Daniel Sanchez Pearson","nationalRank":89,"points":115,"club":"Squash Ciudad de Murcia","realHistory":[{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"8º","points":60},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"9º","points":55}]},{"name":"Rafa Rodriguez","points":100,"club":"Cuenca Squash Club","realHistory":[{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"6º","points":100}]},{"name":"Vicente Cubells Cuesta","points":90,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"12º","points":40},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"10º","points":50}]},{"name":"Alex Garbi","points":60,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"8º","points":60}]},{"name":"Esteban Villalba Layunta","points":40,"club":"-","realHistory":[{"date":"21-23 Feb 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"12º","points":40}]}],"catFem":[{"name":"Daria Bogdanova","points":1200,"club":"-","birthDate":"1999-01-20","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"3º","points":200},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"2º","points":500}]},{"name":"Chantal Pitarch","points":900,"club":"-","realHistory":[{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"1º","points":300},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"1º","points":600}]},{"name":"Alicia Ferrer Sáez","points":880,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"4º","points":170},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"4º","points":170},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"4º","points":340}]},{"name":"Thais Miralles","points":850,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"3º","points":400}]},{"name":"Marta Garrido Blanco","points":300,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"1º","points":300}]},{"name":"Linda Svilane","points":300,"club":"Ladies Squash Valencia","realHistory":[{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"1º","points":300}]},{"name":"Paula Company Anchel","points":170,"club":"-","realHistory":[{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"4º","points":170}]}],"cat2":[{"name":"Carlos Vicent","points":825,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"4º","points":190},{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"2º","points":150},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"5º","points":90},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"2º","points":100}]},{"name":"Andrey Sergienko","points":600,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"6º","points":85},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"9º","points":55},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"7º","points":70},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"1º","points":200},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"3º","points":90}]},{"name":"Julio Latorre","nationalRank":76,"points":520,"club":"Club OLYMPIA ALCOY","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"10º","points":100},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"10º","points":50},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"6º","points":85},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"13º","points":35},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"6º","points":85},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"4º","points":70}]},{"name":"Jose Latorre","points":405,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"3º","points":200},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"2º","points":150},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"9º","points":55}]},{"name":"Tino Ferrandis","points":405,"club":"Tenisquash","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"8º","points":60},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"2º","points":150}]},{"name":"Antonio Cuixeres De la Fuente","nationalRank":95,"points":400,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"1º","points":400}]},{"name":"Manolo Candalija Belmonte","points":370,"club":"-","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"5º","points":90},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"5º","points":90},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"5º","points":90}]},{"name":"Ricardo Belda","points":350,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"9º","points":55},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"1º","points":200}]},{"name":"Félix Sánchez Caparrós","nationalRank":97,"points":315,"club":"Club Náutico Aguadulce","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"11º","points":45},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"7º","points":70},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"7º","points":70},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"5º","points":90},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"7º","points":40}]},{"name":"Javi Hernández Gil","points":275,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"18º","points":10},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"2º","points":150},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"16º","points":20}]},{"name":"Inda Terol","points":265,"club":"Club OLYMPIA ALCOY","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"6º","points":170},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"4º","points":95}]},{"name":"Victor Ferrero","points":265,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"13º","points":70},{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"22º","points":10},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"14º","points":30},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"11º","points":45},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"12º","points":40},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"7º","points":70}]},{"name":"David Chelly","points":215,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"8º","points":120},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"12º","points":40},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"14º","points":30},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"15º","points":25}]},{"name":"Oscar Montoya","points":200,"club":"Cuenca Squash Club","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"1º","points":200}]},{"name":"Jose Luis Castillo González","points":190,"club":"Ilice Squash Club","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"5º","points":90}]},{"name":"Jose Leon","points":185,"club":"Illice Squash Club","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"14º","points":30},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"8º","points":60},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"10º","points":50},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"15º","points":25},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"12º","points":20}]},{"name":"Lorenzo Santonja","points":180,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"9º","points":110},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"15º","points":25},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"11º","points":45}]},{"name":"Javier Martos Martínez","points":155,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"7º","points":70},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"6º","points":85}]},{"name":"Alberto Bolos","points":150,"club":"-","realHistory":[{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"2º","points":150}]},{"name":"Juan Carlos Sanchez Serrano","nationalRank":111,"points":140,"club":"Club Squash Algemesí","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"7º","points":140}]},{"name":"Toni Molina Rochina","points":135,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"12º","points":80},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"13º","points":35},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"8º","points":20}]},{"name":"Carlos Villaplana Velasco","points":110,"club":"-","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"9º","points":55},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"9º","points":55}]},{"name":"Chantal Pitarch","points":110,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"8º","points":60},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"10º","points":50}]},{"name":"Eduardo F. Kuehnel Pinto","points":100,"club":"-","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"12º","points":40},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"8º","points":60}]},{"name":"Jesús Pérez","points":95,"club":"Club d'Esquaix l'Alcúdia","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"19º","points":10},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"13º","points":35},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"10º","points":50}]},{"name":"Alvaro Garcia","points":95,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"21º","points":10},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"6º","points":85}]},{"name":"Nacho Aguayo Pozo","points":90,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"11º","points":90}]},{"name":"Manuel Fernández de la Parra","points":85,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"6º","points":85}]},{"name":"Miguel Guerrero Moliner","points":70,"club":"-","realHistory":[{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"7º","points":70}]},{"name":"Sascha Lichtenstein","points":60,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"8º","points":60}]},{"name":"Antonio López","points":55,"club":"Socuéllamos Squash Club","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"13º","points":35},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"10º","points":20}]},{"name":"Pablo Eduardo Pearson","nationalRank":50,"points":50,"club":"Squash Ciudad de Murcia","realHistory":[{"date":"2025/2026","event":"Campeonato Absoluto","pos":"6º","points":50}]},{"name":"Thais Miralles","points":50,"club":"-","realHistory":[{"date":"2025/2026","event":"Campeonato Absoluto","pos":"6º","points":50}]},{"name":"Borja Garriga","points":45,"club":"-","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"15º","points":25},{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"16º","points":20}]},{"name":"Fernando Aguilar","points":40,"club":"-","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"14º","points":25},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"16º","points":15}]},{"name":"Dani Espert","points":35,"club":"-","realHistory":[{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"11º","points":35}]},{"name":"Marco Bozzano","points":30,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"5º","points":30}]},{"name":"Ivan Rodrigo","points":30,"club":"-","realHistory":[{"date":"2025/2026","event":"2ª Prueba Autonómica","pos":"12º","points":30}]},{"name":"Ivan Tudela","points":25,"club":"-","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"15º","points":25}]},{"name":"Pep Abad","points":20,"club":"-","realHistory":[{"date":"2025/2026","event":"Campeonato Absoluto","pos":"9º","points":20}]},{"name":"Pepe Pérez","points":20,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"17º","points":20}]},{"name":"Juan Hernández","points":15,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"18º","points":15}]},{"name":"Iñigo Guerrero","points":10,"club":"-","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"20º","points":10}]},{"name":"Jorge Canet","points":10,"club":"-","realHistory":[{"date":"2025/2026","event":"1ª Prueba Autonómica","pos":"21º","points":10}]}],"catJun":[]},"2026":{"cat1":[{"name":"Guillermo Pedernera","points":1420,"club":"Club Squash Valencia","birthDate":"1985-03-22","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"4º","points":170},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"3º","points":200},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"1º","points":300},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"2º","points":500}]},{"name":"Javier Castillo","points":1230,"club":"-","birthDate":"1998-11-10","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"5º","points":120},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"8º","points":60},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"6º","points":100},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"6º","points":100},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"1º","points":600}]},{"name":"Adrian Revert","points":1150,"club":"Club Squash Algemesí","isTop10Spain":true,"nationalRank":10,"realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"1º","points":300},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"8º","points":60},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"3º","points":200},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"2º","points":250},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"4º","points":170},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"4º","points":170},{"date":"NORMATIVA","event":"<b>Nº 2 Directo:</b> Top 10 Ranking Nacional (RN 9)","pos":"-","points":"-"}]},{"name":"Guillermo Mongé","points":1025,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"8º","points":60},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"4º","points":170},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"2º","points":250},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"4º","points":170},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"5º","points":120},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"9º","points":55},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"5º","points":200}]},{"name":"Jamie Williams","points":845,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"3º","points":200},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"5º","points":120},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"9º","points":55},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"7º","points":70},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"3º","points":400}]},{"name":"Pablo Sanchis Tatay","nationalRank":59,"points":640,"club":"Club Squash Algemesí","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"4º","points":240}]},{"name":"Toni Molina Vera","nationalRank":59,"points":625,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"9º","points":55},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"9º","points":55},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"4º","points":170},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"13º","points":35},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"8º","points":110}]},{"name":"Ernesto Revert","points":600,"club":"Åsane Squash Klubb","isTop10Spain":true,"nationalRank":7,"birthDate":"1994-05-15","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"1º","points":300},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"1º","points":300},{"date":"NORMATIVA","event":"<b>Nº 1 Directo:</b> Top 10 Ranking Nacional (RN 6)","pos":"-","points":"-"}]},{"name":"Alex Boni","nationalRank":42,"points":550,"club":"Club Squash Valencia","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"2º","points":250},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"1º","points":300}]},{"name":"Pablo de Grado","points":505,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"11º","points":45},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"5º","points":120},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"7º","points":70},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"6º","points":100},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"10º","points":50},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"7º","points":120}]},{"name":"Telmo Ildefonso","points":430,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"6º","points":100},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"7º","points":70},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"5º","points":120},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"6º","points":140}]},{"name":"Pablo Quintana Estevez","points":300,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"1º","points":300}]},{"name":"Santiago Ramos","points":250,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"2º","points":250}]},{"name":"Alejandro Sanchez Sabido","points":240,"club":"-","realHistory":[{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"5º","points":120},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"8º","points":60},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"8º","points":60}]},{"name":"Paco Miró","nationalRank":75,"points":220,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"10º","points":50},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"11º","points":45},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"11º","points":45},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"9º","points":80}]},{"name":"Jacobo Montava","points":195,"club":"Club Olympia Alcoy","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"11º","points":45},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"9º","points":55},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"10º","points":50},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"11º","points":45}]},{"name":"Victor Rodríguez","points":140,"club":"Cuenca Squash Club","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"7º","points":70},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"7º","points":70}]},{"name":"Rubén Avendaño","points":140,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"10º","points":50},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"12º","points":40},{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"10º","points":50}]},{"name":"Rafa Rodriguez","points":100,"club":"Cuenca Squash Club","realHistory":[{"date":"23-24 May 2025","event":"3ª Prueba Autonómica - Tenisquash","pos":"6º","points":100}]},{"name":"Angel Giron Descalzo","points":100,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"6º","points":100}]},{"name":"Alex Garbi","points":100,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"12º","points":40},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"8º","points":60}]},{"name":"Daniel Sanchez Pearson","nationalRank":89,"points":90,"club":"Squash Ciudad de Murcia","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"13º","points":35},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"9º","points":55}]},{"name":"Vicente Cubells Cuesta","points":90,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"12º","points":40},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"10º","points":50}]},{"name":"Carlos Jimenez","nationalRank":73,"points":70,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"7º","points":70}]},{"name":"Robertino Pezzota","points":0,"club":"-","realHistory":[{"date":"21-22 Mar 2025","event":"1ª Prueba Autonómica - Olympia (Alboraya)","pos":"1º","points":300},{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"1º","points":300}]},{"name":"Mario Miralles Jordan","points":0,"club":"-","realHistory":[{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"4º","points":170}]},{"name":"Daniel Tarazona Cebollada","points":0,"club":"Club Squash Valencia","realHistory":[{"date":"21-22 Mar 2025","event":"2ª Prueba Autonómica - Olympia (Alcoy)","pos":"5º","points":460}]}],"catFem":[{"name":"Daria Bogdanova","points":1400,"club":"-","birthDate":"1999-01-20","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"3º","points":200},{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"3º","points":200},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"2º","points":500}]},{"name":"Chantal Pitarch","points":900,"club":"-","realHistory":[{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"1º","points":300},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"1º","points":600}]},{"name":"Alicia Ferrer Sáez","points":880,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"4º","points":170},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"4º","points":170},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"4º","points":340}]},{"name":"Thais Miralles","points":850,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"2º","points":250},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"3º","points":200},{"date":"07-08 Nov 2025","event":"Campeonato Absoluto CV - U. Alicante","pos":"3º","points":400}]},{"name":"Linda Svilane","points":600,"club":"Ladies Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"1º","points":300},{"date":"07-08 Nov 2025","event":"6ª Prueba Autonómica - Tenisquash","pos":"1º","points":300}]},{"name":"Marta Garrido Blanco","points":300,"club":"-","realHistory":[{"date":"19-20 Sep 2025","event":"4ª Prueba Autonómica - Olympia (Alcoy)","pos":"1º","points":300}]},{"name":"Paula Company Anchel","points":290,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"5º","points":120},{"date":"17-19 Oct 2025","event":"5ª Prueba Autonómica - K7 (Paterna)","pos":"4º","points":170}]},{"name":"Anna Baietan","points":250,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"2º","points":250}]},{"name":"Raquel Medina","points":170,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"4º","points":170}]}],"cat2":[{"name":"Carlos Vicent","points":775,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"3º","points":100},{"date":"2025/2026","event":"Master CV","pos":"4º","points":190},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"5º","points":90},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"2º","points":100}]},{"name":"Julio Latorre","nationalRank":76,"points":600,"club":"Club OLYMPIA ALCOY","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"13º","points":35},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"4º","points":95},{"date":"2025/2026","event":"Master CV","pos":"10º","points":100},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"6º","points":85},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"13º","points":35},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"6º","points":85},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"4º","points":70}]},{"name":"Andrey Sergienko","points":460,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"7º","points":70},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"1º","points":200},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"3º","points":90}]},{"name":"Jose Latorre","points":405,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"3º","points":200},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"2º","points":150},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"9º","points":55}]},{"name":"Antonio Cuixeres De la Fuente","nationalRank":95,"points":400,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"1º","points":400}]},{"name":"Manolo Candalija Belmonte","points":385,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"9º","points":55},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"2º","points":150},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"5º","points":90},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"5º","points":90}]},{"name":"Alberto Bolos","points":370,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"2º","points":150},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"7º","points":70},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"2º","points":150}]},{"name":"Javi Hernández Gil","points":365,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"3º","points":100},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"2º","points":150},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"16º","points":20}]},{"name":"Tino Ferrandis","points":345,"club":"Tenisquash","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"3º","points":100},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"4º","points":95},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"2º","points":150}]},{"name":"Carlos Villaplana Velasco","points":345,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"5º","points":90},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"1º","points":200},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"9º","points":55}]},{"name":"David Chelly","points":315,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"16º","points":20},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"6º","points":85},{"date":"2025/2026","event":"Master CV","pos":"8º","points":120},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"12º","points":40},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"14º","points":30},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"15º","points":25}]},{"name":"Ricardo Belda","points":305,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"10º","points":50},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"9º","points":55},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"1º","points":200}]},{"name":"Félix Sánchez Caparrós","nationalRank":97,"points":290,"club":"Club Náutico Aguadulce","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"5º","points":90},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"7º","points":70},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"5º","points":90},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"7º","points":40}]},{"name":"Victor Ferrero","points":250,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"15º","points":25},{"date":"2025/2026","event":"Master CV","pos":"13º","points":70},{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"11º","points":45},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"12º","points":40},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"7º","points":70}]},{"name":"Esteban Villalba Layunta","points":200,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"1º","points":200}]},{"name":"Oscar Montoya","points":200,"club":"Cuenca Squash Club","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"1º","points":200}]},{"name":"Toni Molina Rochina","points":180,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"11º","points":45},{"date":"2025/2026","event":"Master CV","pos":"12º","points":80},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"13º","points":35},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"8º","points":20}]},{"name":"Inda Terol","points":170,"club":"Club OLYMPIA ALCOY","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"6º","points":170}]},{"name":"Miguel Guerrero Moliner","points":165,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"4º","points":95},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"7º","points":70}]},{"name":"Lorenzo Santonja","points":155,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"9º","points":110},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"11º","points":45}]},{"name":"Juan Carlos Sanchez Serrano","nationalRank":111,"points":140,"club":"Club Squash Algemesí","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"7º","points":140}]},{"name":"Manuel Fernández de la Parra","points":130,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"11º","points":45},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"6º","points":85}]},{"name":"Alvaro Garcia","points":115,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"18º","points":10},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"17º","points":10},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"21º","points":10},{"date":"2025/2026","event":"6ª Prueba Autonómica","pos":"6º","points":85}]},{"name":"Chantal Pitarch","points":110,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"8º","points":60},{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"10º","points":50}]},{"name":"Jose Leon","points":95,"club":"Illice Squash Club","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"10º","points":50},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"15º","points":25},{"date":"2025/2026","event":"Campeonato Absoluto","pos":"12º","points":20}]},{"name":"Nacho Aguayo Pozo","points":90,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"11º","points":90}]},{"name":"Pablo Aranda Navarro","points":85,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"6º","points":85}]},{"name":"Jesús Pérez","points":85,"club":"Club d'Esquaix l'Alcúdia","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"13º","points":35},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"10º","points":50}]},{"name":"Lorenzo Sanchez Martinez","points":70,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"7º","points":70}]},{"name":"Eduardo F. Kuehnel Pinto","points":60,"club":"-","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"8º","points":60}]},{"name":"Marko Baietan","points":60,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"8º","points":60}]},{"name":"Sascha Lichtenstein","points":60,"club":"Club Squash Valencia","realHistory":[{"date":"2025/2026","event":"5ª Prueba Autonómica","pos":"8º","points":60}]},{"name":"Victor Perez Boronat","points":60,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"8º","points":60}]},{"name":"Javier Martos Martínez","points":60,"club":"Club Squash Valencia","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"14º","points":30},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"14º","points":30}]},{"name":"Luis Miguel Alba Jimenez","nationalRank":120,"points":55,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"9º","points":55}]},{"name":"Pablo Eduardo Pearson","nationalRank":50,"points":50,"club":"Squash Ciudad de Murcia","realHistory":[{"date":"2025/2026","event":"Campeonato Absoluto","pos":"6º","points":50}]},{"name":"Thais Miralles","points":50,"club":"-","realHistory":[{"date":"2025/2026","event":"Campeonato Absoluto","pos":"6º","points":50}]},{"name":"Sergio García Bernardo","points":50,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"10º","points":50}]},{"name":"José Manuel López Doval","points":45,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"21º","points":10},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"13º","points":35}]},{"name":"Jānis Melderis","points":40,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"12º","points":40}]},{"name":"Fernando Aguilar","points":40,"club":"-","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"14º","points":25},{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"16º","points":15}]},{"name":"Raul Pascual","points":40,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"12º","points":40}]},{"name":"Marco Bozzano","points":30,"club":"-","realHistory":[{"date":"2025/2026","event":"Master CV","pos":"5º","points":30}]},{"name":"Ivan Tudela","points":25,"club":"-","realHistory":[{"date":"2025/2026","event":"3ª Prueba Autonómica","pos":"15º","points":25}]},{"name":"Julio García","points":25,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"15º","points":25}]},{"name":"Antonio López","points":20,"club":"Socuéllamos Squash Club","realHistory":[{"date":"2025/2026","event":"Campeonato Absoluto","pos":"10º","points":20}]},{"name":"Pep Abad","points":20,"club":"-","realHistory":[{"date":"2025/2026","event":"Campeonato Absoluto","pos":"9º","points":20}]},{"name":"Pepe Pérez","points":20,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"17º","points":20}]},{"name":"Rafa Latorre","points":20,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"16º","points":20}]},{"name":"Juan Hernández","points":15,"club":"-","realHistory":[{"date":"2025/2026","event":"4ª Prueba Autonómica","pos":"18º","points":15}]},{"name":"Eduardo Kuhnel","points":10,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"17º","points":10}]},{"name":"Eduardo Francisco Kuehnel Pinto","points":10,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"20º","points":10}]},{"name":"Kevin Magee","points":10,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"19º","points":10}]},{"name":"Carlos Zafra Pastor","points":10,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"22º","points":10}]},{"name":"Gonzalo Requena","points":10,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"23º","points":10}]},{"name":"Aleksander Sanchez Kuznetsov","points":10,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"24º","points":10}]},{"name":"Dani Soriano","points":10,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"25º","points":10}]},{"name":"Edu Leiva","points":10,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"18º","points":10}]},{"name":"David Sanchis Lopez","points":10,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"19º","points":10}]},{"name":"Jesús Lamas Carreira","points":10,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"20º","points":10}]},{"name":"Dani Espert","points":0,"club":"-","realHistory":[]},{"name":"Ivan Rodrigo","points":0,"club":"-","realHistory":[]},{"name":"Borja Garriga","points":0,"club":"-","realHistory":[]},{"name":"Jose Luis Castillo González","points":0,"club":"Ilice Squash Club","realHistory":[]},{"name":"Iñigo Guerrero","points":0,"club":"-","realHistory":[]},{"name":"Jorge Canet","points":0,"club":"-","realHistory":[]}],"catJun":[{"name":"Alvaro Garcia","points":400,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"1º","points":200},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"1º","points":200}]},{"name":"Aleksander Sanchez Kuznetsov","points":250,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"3º","points":100},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"2º","points":150}]},{"name":"Quique Colomina Daroca","points":195,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"4º","points":95},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"3º","points":100}]},{"name":"Victor Sanchez Kuznetsov","points":180,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"5º","points":90},{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"5º","points":90}]},{"name":"Eduardo Kuhnel","points":150,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"2º","points":150}]},{"name":"Pep Vicent","points":95,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"4º","points":95}]},{"name":"Veronika Mazur","points":85,"club":"-","realHistory":[{"date":"20-21 Mar 2026","event":"2ª Prueba Autonómica - Valencia","pos":"6º","points":85}]},{"name":"Nico Samper","points":85,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"6º","points":85}]},{"name":"Nico Miró Lara","points":70,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"7º","points":70}]},{"name":"Miguel Payá","points":60,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"8º","points":60}]},{"name":"Thiago Albert","points":55,"club":"-","realHistory":[{"date":"26-27 FEB 2026","event":"1ª Prueba Autonómica - Alcoy","pos":"9º","points":55}]}]}};
+
+        // --- COLORES AVATAR ---
+        const avatarColors = [
+            '#1e3c72', '#c0392b', '#27ae60', '#8e44ad', '#d35400',
+            '#2980b9', '#16a085', '#f39c12', '#2c3e50', '#7f8c8d'
+        ];
+
+        function getAvatarColor(name) {
+            let hash = 0;
+            for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash);
+            return avatarColors[Math.abs(hash) % avatarColors.length];
+        }
+
+        function getInitials(name) {
+            return name.split(' ').slice(0, 2).map(n => n[0]).join('').toUpperCase();
+        }
+
+        function calculateAge(birthDate) {
+            if (!birthDate) return '-';
+            const today = new Date();
+            const birth = new Date(birthDate);
+            let age = today.getFullYear() - birth.getFullYear();
+            const m = today.getMonth() - birth.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
+            return age + ' años';
+        }
+
+        function formatBirthDate(birthDate) {
+            if (!birthDate) return '-';
+            const [y, m, d] = birthDate.split('-');
+            return `${d}/${m}/${y}`;
+        }
+
+        let allData = {};
+        let currentData = [];
+
+        // Carga el JSON externo
+        // Inicializa con datos embebidos directamente
+        allData = INLINE_DATA;
+        document.getElementById('loadingMsg').style.display = 'none';
+        loadCategory();
+
+        function loadCategory() {
+            const year = document.getElementById('yearSelect').value;
+            const cat = document.getElementById('categorySelect').value;
+
+            const yearData = allData[year] || allData['2026'] || {};
+            currentData = (yearData[cat] || []).slice(); // copia para no mutar
+
+            // Top 10 RN siempre arriba, ordenados por nationalRank; resto por puntos
+            currentData.sort((a, b) => {
+                const aTop = a.isTop10Spain ? 1 : 0;
+                const bTop = b.isTop10Spain ? 1 : 0;
+                if (aTop !== bTop) return bTop - aTop; // top10 primero
+                if (aTop && bTop) return (a.nationalRank || 999) - (b.nationalRank || 999); // menor RN = mejor
+                return b.points - a.points; // resto por puntos
+            });
+
+            document.getElementById('searchInput').value = '';
+            document.getElementById('headerYearTitle').textContent = `Año ${year}`;
+            document.getElementById('yearTitleModal').textContent = `Resultados Año ${year}`;
+            renderTable(currentData);
+        }
+
+        function renderTable(data) {
+            const tbody = document.getElementById('rankingBody');
+            tbody.innerHTML = '';
+
+            if (!data || data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="text-center" style="padding: 30px; color: #888;">No hay clasificados en esta categoría y año todavía.</td></tr>';
+                return;
+            }
+
+            let rowsHTML = '';
+            data.forEach((player, index) => {
+                const rank = index + 1;
+                const numTournaments = player.realHistory ? player.realHistory.length : 0;
+                let rowClass = '';
+                if (rank === 1) rowClass = 'rank-1';
+                else if (rank === 2) rowClass = 'rank-2';
+                else if (rank === 3) rowClass = 'rank-3';
+
+                rowsHTML += `
+                <tr class="${rowClass}">
+                    <td class="text-center col-rank">
+                        <span class="rank-badge">${rank}</span>
+                    </td>
+                    <td class="col-name">
+                        <span class="clickable-name" onclick="showProfile(${index})">${player.name}</span>
+                        ${player.nationalRank ? '<span class="top10-badge">RN ' + player.nationalRank + '</span>' : (player.isTop10Spain ? '<span class="top10-badge">TOP 10 ESP</span>' : '')}
+                        ${player.isTop7Spain ? '<span class="top10-badge">TOP 7 ESP</span>' : ''}
+                    </td>
+                    <td class="text-center col-nt">
+                        <span class="tournaments">${numTournaments}</span>
+                    </td>
+                    <td class="text-center col-pts">
+                        <span class="points">${player.points}</span>
+                    </td>
+                    <td class="col-club">
+                        <span class="club">${player.club || '-'}</span>
+                    </td>
+                    <td class="text-center col-btn">
+                        <button class="btn-profile" onclick="showProfile(${index})">Ver ficha</button>
+                    </td>
+                </tr>`;
+            });
+            tbody.innerHTML = rowsHTML;
+        }
+
+        function filterPlayers() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = currentData.filter(p => p.name.toLowerCase().includes(query));
+            renderTable(filtered);
+        }
+
+        function showProfile(index) {
+            const player = currentData[index];
+            const rank = index + 1;
+
+            const imgContainer = document.getElementById('modalImageContainer');
+            const color = getAvatarColor(player.name);
+            imgContainer.innerHTML = `
+            <div class="profile-avatar-large" style="background: linear-gradient(135deg, ${color}, ${color}cc);">
+                ${getInitials(player.name)}
+            </div>`;
+
+            document.getElementById('modalName').textContent = player.name;
+            document.getElementById('modalClub').textContent = player.club || '-';
+            document.getElementById('modalRank').textContent = '#' + rank;
+            document.getElementById('modalPoints').textContent = player.points + ' pts';
+            document.getElementById('modalTournaments').textContent = (player.realHistory ? player.realHistory.length : 0) + ' torneos';
+
+            const badgeContainer = document.getElementById('modalBadgeContainer');
+            if (player.nationalRank) {
+                badgeContainer.innerHTML = '<div class="sidebar-badge">🏆 RN ' + player.nationalRank + '</div>';
+            } else if (player.isTop7Spain) {
+                badgeContainer.innerHTML = '<div class="sidebar-badge">🏆 TOP 7 ESPAÑA</div>';
+            } else if (player.isTop10Spain) {
+                badgeContainer.innerHTML = '<div class="sidebar-badge">🏆 TOP 10 ESPAÑA</div>';
+            } else {
+                badgeContainer.innerHTML = '';
+            }
+
+            document.getElementById('bioBirthDate').textContent = formatBirthDate(player.birthDate);
+            document.getElementById('bioAge').textContent = calculateAge(player.birthDate);
+            document.getElementById('bioClubModal').textContent = player.club || '-';
+
+            const historyList = document.getElementById('modalHistoryList');
+            if (player.realHistory && player.realHistory.length > 0) {
+                let historyHTML = '';
+                player.realHistory.forEach(h => {
+                    const posNum = parseInt(h.pos);
+                    let posClass = '';
+                    if (posNum === 1) posClass = 'pos-1';
+                    else if (posNum === 2) posClass = 'pos-2';
+                    else if (posNum === 3) posClass = 'pos-3';
+
+                    historyHTML += `
+                    <div class="tournament-card">
+                        <div class="t-info">
+                            <span class="t-date">${h.date}</span>
+                            <span class="t-name">${h.event}</span>
+                        </div>
+                        <div class="t-result">
+                            <span class="t-pos ${posClass}">${h.pos}</span>
+                            <span class="t-pts">${h.points !== '-' ? h.points + ' pts' : ''}</span>
+                        </div>
+                    </div>`;
+                });
+                historyList.innerHTML = historyHTML;
+            } else {
+                historyList.innerHTML = '<p style="color:#999; text-align:center;">Sin resultados disponibles</p>';
+            }
+
+            document.getElementById('profileModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event.target === document.getElementById('profileModal')) {
+                closeModalButton();
+            }
+        }
+
+        function closeModalButton() {
+            document.getElementById('profileModal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // =====================================================
+        // FACE TO FACE
+        // =====================================================
+        let f2fPlayer1 = null;
+        let f2fPlayer2 = null;
+
+        function getAllPlayers() {
+            // Recopila todos los jugadores de todas las categorías y años, sin duplicados por nombre
+            const seen = new Set();
+            const players = [];
+            for (const yr of Object.keys(allData)) {
+                if (yr === 'h2h') continue;
+                const yearObj = allData[yr];
+                if (!yearObj || typeof yearObj !== 'object') continue;
+                for (const cat of Object.keys(yearObj)) {
+                    const list = yearObj[cat];
+                    if (!Array.isArray(list)) continue;
+                    for (const p of list) {
+                        if (p && p.name && !seen.has(p.name)) {
+                            seen.add(p.name);
+                            players.push(p);
+                        }
+                    }
+                }
+            }
+            return players.sort((a, b) => a.name.localeCompare(b.name));
+        }
+
+        function openF2F() {
+            f2fPlayer1 = null;
+            f2fPlayer2 = null;
+            document.getElementById('f2fSearch1').value = '';
+            document.getElementById('f2fSearch2').value = '';
+            document.getElementById('f2fDrop1').style.display = 'none';
+            document.getElementById('f2fDrop2').style.display = 'none';
+            resetF2FPlayer(1);
+            resetF2FPlayer(2);
+            renderF2F();
+            document.getElementById('f2fModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function resetF2FPlayer(n) {
+            document.getElementById('f2fAvatar' + n).className = 'f2f-placeholder';
+            document.getElementById('f2fAvatar' + n).innerHTML = '👤';
+            document.getElementById('f2fAvatar' + n).style.background = '';
+            document.getElementById('f2fName' + n).textContent = 'Selecciona jugador';
+            document.getElementById('f2fName' + n).className = 'f2f-name f2f-select-prompt';
+            document.getElementById('f2fClub' + n).textContent = '';
+        }
+
+        function f2fFilter(n) {
+            const query = document.getElementById('f2fSearch' + n).value.toLowerCase().trim();
+            const drop = document.getElementById('f2fDrop' + n);
+            if (!query) { drop.style.display = 'none'; return; }
+            const players = getAllPlayers().filter(p => p.name.toLowerCase().includes(query));
+            if (!players.length) { drop.style.display = 'none'; return; }
+            drop.innerHTML = players.slice(0, 10).map(p =>
+                `<div class="f2f-dropdown-item" onclick="selectF2FPlayer(${n}, '${p.name.replace(/'/g, "\\'")}')">` +
+                `${p.name} <span style="opacity:0.5;font-size:11px;">${p.club && p.club !== '-' ? '· ' + p.club : ''}</span></div>`
+            ).join('');
+            drop.style.display = 'block';
+        }
+
+        function selectF2FPlayer(n, name) {
+            const players = getAllPlayers();
+            const player = players.find(p => p.name === name);
+            if (!player) return;
+
+            if (n === 1) f2fPlayer1 = player;
+            else f2fPlayer2 = player;
+
+            // Update avatar
+            const color = getAvatarColor(player.name);
+            const avatarEl = document.getElementById('f2fAvatar' + n);
+            avatarEl.className = 'f2f-avatar';
+            avatarEl.style.background = `linear-gradient(135deg, ${color}, ${color}bb)`;
+            avatarEl.innerHTML = getInitials(player.name);
+
+            // Update name & club
+            const nameEl = document.getElementById('f2fName' + n);
+            nameEl.textContent = player.name;
+            nameEl.className = 'f2f-name';
+            document.getElementById('f2fClub' + n).textContent = player.club && player.club !== '-' ? player.club : '';
+
+            // Close dropdown & clear input
+            document.getElementById('f2fSearch' + n).value = '';
+            document.getElementById('f2fDrop' + n).style.display = 'none';
+
+            renderF2F();
+        }
+
+        function renderF2F() {
+            const w1El = document.getElementById('f2fWins1');
+            const w2El = document.getElementById('f2fWins2');
+            const labelEl = document.getElementById('f2fMatchesLabel');
+            const histEl = document.getElementById('f2fHistory');
+            const donut1 = document.getElementById('f2fDonut1');
+            const donut2 = document.getElementById('f2fDonut2');
+            const donutLabel = document.getElementById('f2fDonutLabel');
+            const circumference = 2 * Math.PI * 38; // ~239
+
+            if (!f2fPlayer1 || !f2fPlayer2) {
+                w1El.textContent = '-';
+                w2El.textContent = '-';
+                labelEl.textContent = 'Selecciona dos jugadores';
+                donut1.setAttribute('stroke-dasharray', `0 ${circumference}`);
+                donut2.setAttribute('stroke-dasharray', `0 ${circumference}`);
+                donutLabel.innerHTML = '<span>VS</span>';
+                histEl.innerHTML = '<div class="f2f-empty">Selecciona dos jugadores para ver sus enfrentamientos</div>';
+                return;
+            }
+
+            const n1 = f2fPlayer1.name;
+            const n2 = f2fPlayer2.name;
+
+            // Get H2H matches from allData.h2h
+            const h2hList = (allData.h2h || []).filter(entry => {
+                return (entry.p1 === n1 && entry.p2 === n2) || (entry.p1 === n2 && entry.p2 === n1);
+            });
+
+            const matches = h2hList.flatMap(entry => entry.matches || []);
+
+            let wins1 = 0, wins2 = 0;
+            matches.forEach(m => {
+                if (m.winner === n1) wins1++;
+                else if (m.winner === n2) wins2++;
+            });
+
+            const total = wins1 + wins2;
+
+            w1El.textContent = wins1;
+            w2El.textContent = wins2;
+            labelEl.textContent = total === 0 ? 'Sin enfrentamientos registrados' : `${total} partido${total !== 1 ? 's' : ''}`;
+
+            // Donut chart
+            if (total > 0) {
+                const arc1 = (wins1 / total) * circumference;
+                const arc2 = (wins2 / total) * circumference;
+                donut1.setAttribute('stroke-dasharray', `${arc1} ${circumference - arc1}`);
+                donut2.setAttribute('stroke-dasharray', `${arc2} ${circumference - arc2}`);
+                donut2.setAttribute('stroke-dashoffset', `-${arc1}`);
+                donutLabel.innerHTML = '<span>VS</span><span style="font-size:9px;opacity:0.6">' + total + ' pts</span>';
+            } else {
+                donut1.setAttribute('stroke-dasharray', `0 ${circumference}`);
+                donut2.setAttribute('stroke-dasharray', `0 ${circumference}`);
+                donutLabel.innerHTML = '<span>VS</span>';
+            }
+
+            // Color del score según quién gana
+            w1El.style.color = wins1 > wins2 ? '#4ade80' : wins1 < wins2 ? '#f87171' : 'white';
+            w2El.style.color = wins2 > wins1 ? '#4ade80' : wins2 < wins1 ? '#f87171' : 'white';
+
+            // History
+            if (matches.length === 0) {
+                histEl.innerHTML = '<div class="f2f-empty">Sin enfrentamientos registrados entre estos jugadores</div>';
+            } else {
+                histEl.innerHTML = matches.map(m => {
+                    const isW1 = m.winner === n1;
+                    const winnerName = isW1 ? n1 : n2;
+                    return `<div class="f2f-match-card">
+                        <div class="f2f-match-info">
+                            <span class="f2f-match-event">${m.event || '-'}</span>
+                            <span class="f2f-match-date">${m.date || ''}</span>
+                        </div>
+                        <div class="f2f-match-result">
+                            <span class="f2f-winner-name">🏆 ${winnerName}</span>
+                            ${m.score ? `<span class="f2f-score-badge">${m.score}</span>` : ''}
+                        </div>
+                    </div>`;
+                }).join('');
+            }
+        }
+
+        function closeF2FModal(event) {
+            if (event.target === document.getElementById('f2fModal')) closeF2FModalButton();
+        }
+
+        function closeF2FModalButton() {
+            document.getElementById('f2fModal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // Cerrar dropdown al hacer clic fuera
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.f2f-search-wrap')) {
+                document.getElementById('f2fDrop1').style.display = 'none';
+                document.getElementById('f2fDrop2').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
