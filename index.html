@@ -1131,55 +1131,7 @@
         </div>
     </div>
 
-    <!-- MODAL -->
-    <div id="profileModal" class="modal-overlay" onclick="closeModal(event)">
-        <div class="modal-content">
-            <div class="close-modal" onclick="closeModalButton()">×</div>
-            <div class="modal-body-grid">
-                <div class="profile-sidebar">
-                    <div id="modalImageContainer"></div>
-                    <h2 id="modalName" class="sidebar-name">Nombre</h2>
-                    <div id="modalClub" class="sidebar-club">Club</div>
-                    <div id="modalBadgeContainer"></div>
-                    <div class="sidebar-stats">
-                        <div class="stat-row">
-                            <span class="stat-key">Ranking</span>
-                            <span id="modalRank" class="stat-value">#1</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-key">Puntos</span>
-                            <span id="modalPoints" class="stat-value">1000</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-key">Torneos</span>
-                            <span id="modalTournaments" class="stat-value">5</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="profile-main">
-                    <div class="section-title">Datos Personales</div>
-                    <div class="bio-grid">
-                        <div class="bio-item">
-                            <span class="bio-label">Fecha Nacimiento</span>
-                            <span id="bioBirthDate" class="bio-value">-</span>
-                        </div>
-                        <div class="bio-item">
-                            <span class="bio-label">Edad</span>
-                            <span id="bioAge" class="bio-value">-</span>
-                        </div>
-                        <div class="bio-item">
-                            <span class="bio-label">Club</span>
-                            <span id="bioClubModal" class="bio-value">-</span>
-                        </div>
-                    </div>
-
-                    <div class="section-title" id="yearTitleModal">Resultados Año 2026</div>
-                    <div id="modalHistoryList"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- MODAL REMOVIDO -->
 
     <script>
         // Datos cargados desde ranking_data.json
@@ -1252,7 +1204,7 @@
 
             document.getElementById('searchInput').value = '';
             document.getElementById('headerYearTitle').textContent = `Año ${year}`;
-            document.getElementById('yearTitleModal').textContent = `Resultados Año ${year}`;
+            
             renderTable(currentData);
         }
 
@@ -1275,12 +1227,12 @@
                 else if (rank === 3) rowClass = 'rank-3';
 
                 rowsHTML += `
-                <tr class="${rowClass}">
+                <tr class="${rowClass}" style="cursor: pointer;" onclick="toggleDetails(${index})">
                     <td class="text-center col-rank">
                         <span class="rank-badge">${rank}</span>
                     </td>
                     <td class="col-name">
-                        <span class="clickable-name" onclick="showProfile(${index})">${player.name}</span>
+                        <span class="clickable-name">${player.name}</span>
                         ${player.nationalRank ? '<span class="top10-badge">RN ' + player.nationalRank + '</span>' : (player.isTop10Spain ? '<span class="top10-badge">TOP 10 ESP</span>' : '')}
                         ${player.isTop7Spain ? '<span class="top10-badge">TOP 7 ESP</span>' : ''}
                     </td>
@@ -1294,7 +1246,42 @@
                         <span class="club">${player.club || '-'}</span>
                     </td>
                     <td class="text-center col-btn">
-                        <button class="btn-profile" onclick="showProfile(${index})">Ver ficha</button>
+                        <button class="btn-profile" onclick="event.stopPropagation(); toggleDetails(${index})" id="btn-details-${index}">Ver detalles</button>
+                    </td>
+                </tr>`;
+
+                // Construir el historial para el desplegable
+                let historyHTML = '';
+                if (player.realHistory && player.realHistory.length > 0) {
+                    player.realHistory.forEach(h => {
+                        const posNum = parseInt(h.pos);
+                        let posClass = '';
+                        if (posNum === 1) posClass = 'pos-1';
+                        else if (posNum === 2) posClass = 'pos-2';
+                        else if (posNum === 3) posClass = 'pos-3';
+
+                        historyHTML += `
+                        <div style="padding: 6px 0; border-bottom: 1px solid #eee; font-size: 13px; color: #333; display: flex; align-items: center; gap: 8px;">
+                            <span style="color: #666; font-size: 11px; white-space: nowrap;">${h.date}</span>
+                            <span style="flex-grow: 1; font-weight: bold;">${h.event}</span>
+                            <span class="${posClass}" style="font-weight: bold; white-space: nowrap;">${h.pos}</span>
+                            <span style="color: #666; font-size: 12px; white-space: nowrap;">${h.points !== '-' ? h.points + ' pts' : ''}</span>
+                        </div>`;
+                    });
+                } else {
+                    historyHTML = '<p style="color:#999; text-align:center; padding: 10px;">Sin resultados disponibles</p>';
+                }
+
+                // Fila desplegable oculta
+                rowsHTML += `
+                <tr id="details-${index}" class="details-row" style="display: none; background-color: #f8f9fa;">
+                    <td colspan="6" style="padding: 0; border-bottom: 2px solid #ddd;">
+                        <div class="details-content" style="padding: 15px; border-top: 1px dashed #ccc;">
+                            <div style="max-width: 600px; margin: 0 auto;">
+                                <h4 style="margin-top:0; margin-bottom: 12px; color:#1e3c72; font-size: 14px; text-transform: uppercase; text-align: center;">Torneos Disputados</h4>
+                                ${historyHTML}
+                            </div>
+                        </div>
                     </td>
                 </tr>`;
             });
@@ -1307,78 +1294,21 @@
             renderTable(filtered);
         }
 
-        function showProfile(index) {
-            const player = currentData[index];
-            const rank = index + 1;
-
-            const imgContainer = document.getElementById('modalImageContainer');
-            const color = getAvatarColor(player.name);
-            imgContainer.innerHTML = `
-            <div class="profile-avatar-large" style="background: linear-gradient(135deg, ${color}, ${color}cc);">
-                ${getInitials(player.name)}
-            </div>`;
-
-            document.getElementById('modalName').textContent = player.name;
-            document.getElementById('modalClub').textContent = player.club || '-';
-            document.getElementById('modalRank').textContent = '#' + rank;
-            document.getElementById('modalPoints').textContent = player.points + ' pts';
-            document.getElementById('modalTournaments').textContent = (player.realHistory ? player.realHistory.length : 0) + ' torneos';
-
-            const badgeContainer = document.getElementById('modalBadgeContainer');
-            if (player.nationalRank) {
-                badgeContainer.innerHTML = '<div class="sidebar-badge">🏆 RN ' + player.nationalRank + '</div>';
-            } else if (player.isTop7Spain) {
-                badgeContainer.innerHTML = '<div class="sidebar-badge">🏆 TOP 7 ESPAÑA</div>';
-            } else if (player.isTop10Spain) {
-                badgeContainer.innerHTML = '<div class="sidebar-badge">🏆 TOP 10 ESPAÑA</div>';
+        function toggleDetails(index) {
+            const detailsRow = document.getElementById(`details-${index}`);
+            const btn = document.getElementById(`btn-details-${index}`);
+            
+            if (detailsRow.style.display === 'none' || detailsRow.style.display === '') {
+                detailsRow.style.display = 'table-row';
+                if(btn) btn.innerHTML = 'Ocultar ▲';
+                if(btn) btn.style.backgroundColor = '#2a5298';
+                if(btn) btn.style.color = 'white';
             } else {
-                badgeContainer.innerHTML = '';
+                detailsRow.style.display = 'none';
+                if(btn) btn.innerHTML = 'Ver detalles';
+                if(btn) btn.style.backgroundColor = 'white';
+                if(btn) btn.style.color = '#2a5298';
             }
-
-            document.getElementById('bioBirthDate').textContent = formatBirthDate(player.birthDate);
-            document.getElementById('bioAge').textContent = calculateAge(player.birthDate);
-            document.getElementById('bioClubModal').textContent = player.club || '-';
-
-            const historyList = document.getElementById('modalHistoryList');
-            if (player.realHistory && player.realHistory.length > 0) {
-                let historyHTML = '';
-                player.realHistory.forEach(h => {
-                    const posNum = parseInt(h.pos);
-                    let posClass = '';
-                    if (posNum === 1) posClass = 'pos-1';
-                    else if (posNum === 2) posClass = 'pos-2';
-                    else if (posNum === 3) posClass = 'pos-3';
-
-                    historyHTML += `
-                    <div class="tournament-card">
-                        <div class="t-info">
-                            <span class="t-date">${h.date}</span>
-                            <span class="t-name">${h.event}</span>
-                        </div>
-                        <div class="t-result">
-                            <span class="t-pos ${posClass}">${h.pos}</span>
-                            <span class="t-pts">${h.points !== '-' ? h.points + ' pts' : ''}</span>
-                        </div>
-                    </div>`;
-                });
-                historyList.innerHTML = historyHTML;
-            } else {
-                historyList.innerHTML = '<p style="color:#999; text-align:center;">Sin resultados disponibles</p>';
-            }
-
-            document.getElementById('profileModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(event) {
-            if (event.target === document.getElementById('profileModal')) {
-                closeModalButton();
-            }
-        }
-
-        function closeModalButton() {
-            document.getElementById('profileModal').style.display = 'none';
-            document.body.style.overflow = '';
         }
 
         // =====================================================
