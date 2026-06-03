@@ -4245,37 +4245,6 @@
         ]
       },
       {
-        "name": "Victor Sanchez Kuznetsov",
-        "points": 500,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "7º",
-            "points": 70
-          },
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "5º",
-            "points": 90
-          },
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "5º",
-            "points": 90
-          },
-          {
-            "date": "29-30 Mayo 2026",
-            "event": "4ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "2º",
-            "points": 250
-          }
-        ]
-      },
-      {
         "name": "Eduardo Kuhnel",
         "points": 450,
         "club": "-",
@@ -4314,25 +4283,6 @@
         ]
       },
       {
-        "name": "Pep Vicent",
-        "points": 395,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "4º",
-            "points": 95
-          },
-          {
-            "date": "29-30 Mayo 2026",
-            "event": "4ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "1º",
-            "points": 300
-          }
-        ]
-      },
-      {
         "name": "Quique Colomina Daroca",
         "points": 365,
         "club": "-",
@@ -4358,8 +4308,58 @@
         ]
       },
       {
+        "name": "Victor Sanchez Kuznetsov",
+        "points": 350,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "7º",
+            "points": 70
+          },
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "5º",
+            "points": 90
+          },
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "5º",
+            "points": 90
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "6º",
+            "points": 100
+          }
+        ]
+      },
+      {
+        "name": "Pep Vicent",
+        "points": 215,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "4º",
+            "points": 95
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "5º",
+            "points": 120
+          }
+        ]
+      },
+      {
         "name": "Nico Samper",
-        "points": 285,
+        "points": 155,
         "club": "-",
         "realHistory": [
           {
@@ -4371,27 +4371,8 @@
           {
             "date": "29-30 Mayo 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "3º",
-            "points": 200
-          }
-        ]
-      },
-      {
-        "name": "Matías Correa Subiabre",
-        "points": 225,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "9º",
-            "points": 55
-          },
-          {
-            "date": "29-30 Mayo 2026",
-            "event": "4ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "4º",
-            "points": 170
+            "pos": "7º",
+            "points": 70
           }
         ]
       },
@@ -4428,15 +4409,21 @@
         ]
       },
       {
-        "name": "Guillem Marí",
-        "points": 120,
+        "name": "Matías Correa Subiabre",
+        "points": 115,
         "club": "-",
         "realHistory": [
           {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "9º",
+            "points": 55
+          },
+          {
             "date": "29-30 Mayo 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "5º",
-            "points": 120
+            "pos": "8º",
+            "points": 60
           }
         ]
       },
@@ -4489,6 +4476,19 @@
             "event": "3ª Prueba Autonómica - K7 (Paterna)",
             "pos": "8º",
             "points": 60
+          }
+        ]
+      },
+      {
+        "name": "Guillem Marí",
+        "points": 55,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "9º",
+            "points": 55
           }
         ]
       },
