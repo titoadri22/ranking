@@ -1805,7 +1805,7 @@
       },
       {
         "name": "Javier Castillo",
-        "points": 1230,
+        "points": 1190,
         "club": "-",
         "birthDate": "1998-11-10",
         "realHistory": [
@@ -1822,10 +1822,10 @@
             "points": 60
           },
           {
-            "date": "19-20 Sep 2025",
-            "event": "4ª Prueba Autonómica - Olympia (Alcoy)",
-            "pos": "6º",
-            "points": 100
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "8º",
+            "points": 60
           },
           {
             "date": "17-19 Oct 2025",
@@ -1873,8 +1873,8 @@
             "points": 60
           },
           {
-            "date": "19-20 Sep 2025",
-            "event": "4ª Prueba Autonómica - Olympia (Alcoy)",
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "2º",
             "points": 250
           },
@@ -1899,8 +1899,46 @@
         ]
       },
       {
+        "name": "Pablo Sanchis Tatay",
+        "nationalRank": 59,
+        "points": 1010,
+        "club": "Club Squash Algemesí",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "3º",
+            "points": 200
+          },
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "3º",
+            "points": 200
+          },
+          {
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
+            "pos": "3º",
+            "points": 200
+          },
+          {
+            "date": "07-08 Nov 2025",
+            "event": "Campeonato Absoluto CV - U. Alicante",
+            "pos": "4º",
+            "points": 240
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "4º",
+            "points": 170
+          }
+        ]
+      },
+      {
         "name": "Jamie Williams",
-        "points": 965,
+        "points": 945,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -1916,10 +1954,10 @@
             "points": 200
           },
           {
-            "date": "19-20 Sep 2025",
-            "event": "4ª Prueba Autonómica - Olympia (Alcoy)",
-            "pos": "5º",
-            "points": 120
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "6º",
+            "points": 100
           },
           {
             "date": "17-19 Oct 2025",
@@ -1976,34 +2014,28 @@
         ]
       },
       {
-        "name": "Pablo Sanchis Tatay",
-        "nationalRank": 59,
-        "points": 840,
-        "club": "Club Squash Algemesí",
+        "name": "Alex Boni",
+        "nationalRank": 42,
+        "points": 850,
+        "club": "Club Squash Valencia",
         "realHistory": [
-          {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "3º",
-            "points": 200
-          },
           {
             "date": "26-27 FEB 2026",
             "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "3º",
-            "points": 200
+            "pos": "2º",
+            "points": 250
           },
           {
-            "date": "07-08 Nov 2025",
-            "event": "6ª Prueba Autonómica - Tenisquash",
-            "pos": "3º",
-            "points": 200
+            "date": "23-24 May 2025",
+            "event": "3ª Prueba Autonómica - Tenisquash",
+            "pos": "1º",
+            "points": 300
           },
           {
-            "date": "07-08 Nov 2025",
-            "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "4º",
-            "points": 240
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "1º",
+            "points": 300
           }
         ]
       },
@@ -2057,28 +2089,8 @@
         ]
       },
       {
-        "name": "Alex Boni",
-        "nationalRank": 42,
-        "points": 550,
-        "club": "Club Squash Valencia",
-        "realHistory": [
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "2º",
-            "points": 250
-          },
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "1º",
-            "points": 300
-          }
-        ]
-      },
-      {
         "name": "Santiago Ramos",
-        "points": 550,
+        "points": 750,
         "club": "-",
         "realHistory": [
           {
@@ -2092,13 +2104,19 @@
             "event": "2ª Prueba Autonómica - Valencia",
             "pos": "2º",
             "points": 250
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "3º",
+            "points": 200
           }
         ]
       },
       {
         "name": "Toni Molina Vera",
         "nationalRank": 59,
-        "points": 510,
+        "points": 565,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -2136,55 +2154,18 @@
             "event": "Campeonato Absoluto CV - U. Alicante",
             "pos": "8º",
             "points": 110
-          }
-        ]
-      },
-      {
-        "name": "Pablo de Grado",
-        "points": 505,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "11º",
-            "points": 45
           },
           {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "5º",
-            "points": 120
-          },
-          {
-            "date": "19-20 Sep 2025",
-            "event": "4ª Prueba Autonómica - Olympia (Alcoy)",
-            "pos": "7º",
-            "points": 70
-          },
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "6º",
-            "points": 100
-          },
-          {
-            "date": "07-08 Nov 2025",
-            "event": "6ª Prueba Autonómica - Tenisquash",
-            "pos": "10º",
-            "points": 50
-          },
-          {
-            "date": "07-08 Nov 2025",
-            "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "7º",
-            "points": 120
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "9º",
+            "points": 55
           }
         ]
       },
       {
         "name": "Telmo Ildefonso",
-        "points": 500,
+        "points": 540,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -2216,25 +2197,61 @@
             "event": "Campeonato Absoluto CV - U. Alicante",
             "pos": "6º",
             "points": 140
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "12º",
+            "points": 40
           }
         ]
       },
       {
-        "name": "Pablo Quintana Estevez",
-        "points": 300,
+        "name": "Pablo de Grado",
+        "points": 480,
         "club": "-",
         "realHistory": [
           {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "11º",
+            "points": 45
+          },
+          {
             "date": "26-27 FEB 2026",
             "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "1º",
-            "points": 300
+            "pos": "5º",
+            "points": 120
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "11º",
+            "points": 45
+          },
+          {
+            "date": "17-19 Oct 2025",
+            "event": "5ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "6º",
+            "points": 100
+          },
+          {
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
+            "pos": "10º",
+            "points": 50
+          },
+          {
+            "date": "07-08 Nov 2025",
+            "event": "Campeonato Absoluto CV - U. Alicante",
+            "pos": "7º",
+            "points": 120
           }
         ]
       },
       {
         "name": "Alejandro Sanchez Sabido",
-        "points": 240,
+        "points": 310,
         "club": "-",
         "realHistory": [
           {
@@ -2254,6 +2271,25 @@
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "8º",
             "points": 60
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "7º",
+            "points": 70
+          }
+        ]
+      },
+      {
+        "name": "Pablo Quintana Estevez",
+        "points": 300,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "1º",
+            "points": 300
           }
         ]
       },
@@ -2321,27 +2357,8 @@
         ]
       },
       {
-        "name": "Victor Rodríguez",
-        "points": 140,
-        "club": "Cuenca Squash Club",
-        "realHistory": [
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "7º",
-            "points": 70
-          },
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "7º",
-            "points": 70
-          }
-        ]
-      },
-      {
         "name": "Rubén Avendaño",
-        "points": 140,
+        "points": 170,
         "club": "-",
         "realHistory": [
           {
@@ -2361,6 +2378,44 @@
             "event": "3ª Prueba Autonómica - Tenisquash",
             "pos": "10º",
             "points": 50
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "14º",
+            "points": 30
+          }
+        ]
+      },
+      {
+        "name": "Victor Rodríguez",
+        "points": 140,
+        "club": "Cuenca Squash Club",
+        "realHistory": [
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "7º",
+            "points": 70
+          },
+          {
+            "date": "23-24 May 2025",
+            "event": "3ª Prueba Autonómica - Tenisquash",
+            "pos": "7º",
+            "points": 70
+          }
+        ]
+      },
+      {
+        "name": "GUILLERMO PEDERNERA",
+        "points": 120,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "5º",
+            "points": 120
           }
         ]
       },
@@ -2449,6 +2504,25 @@
         ]
       },
       {
+        "name": "Andrey Sergienko",
+        "points": 85,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "10º",
+            "points": 50
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "13º",
+            "points": 35
+          }
+        ]
+      },
+      {
         "name": "Carlos Jimenez",
         "nationalRank": 73,
         "points": 70,
@@ -2463,13 +2537,13 @@
         ]
       },
       {
-        "name": "Andrey Sergienko",
+        "name": "Carlos Villaplana Velasco",
         "points": 50,
         "club": "-",
         "realHistory": [
           {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "10º",
             "points": 50
           }
@@ -2479,7 +2553,7 @@
     "catFem": [
       {
         "name": "Daria Bogdanova",
-        "points": 1700,
+        "points": 1750,
         "club": "-",
         "birthDate": "1999-01-20",
         "realHistory": [
@@ -2496,10 +2570,10 @@
             "points": 200
           },
           {
-            "date": "19-20 Sep 2025",
-            "event": "4ª Prueba Autonómica - Olympia (Alcoy)",
-            "pos": "3º",
-            "points": 200
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "2º",
+            "points": 250
           },
           {
             "date": "17-19 Oct 2025",
@@ -2523,7 +2597,7 @@
       },
       {
         "name": "Alicia Ferrer Sáez",
-        "points": 1130,
+        "points": 1160,
         "club": "-",
         "realHistory": [
           {
@@ -2533,10 +2607,10 @@
             "points": 250
           },
           {
-            "date": "19-20 Sep 2025",
-            "event": "4ª Prueba Autonómica - Olympia (Alcoy)",
-            "pos": "4º",
-            "points": 170
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "3º",
+            "points": 200
           },
           {
             "date": "17-19 Oct 2025",
@@ -2635,6 +2709,19 @@
         ]
       },
       {
+        "name": "Joanne Smalley",
+        "points": 300,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "1º",
+            "points": 300
+          }
+        ]
+      },
+      {
         "name": "Paula Company Anchel",
         "points": 290,
         "club": "-",
@@ -2704,6 +2791,19 @@
             "points": 170
           }
         ]
+      },
+      {
+        "name": "Daniela Subiabre",
+        "points": 170,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "4º",
+            "points": 170
+          }
+        ]
       }
     ],
     "cat2": [
@@ -2739,8 +2839,45 @@
         ]
       },
       {
+        "name": "Alberto Bolos",
+        "points": 700,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "2º",
+            "points": 150
+          },
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "7º",
+            "points": 70
+          },
+          {
+            "date": "2025/2026",
+            "event": "5ª Prueba Autonómica",
+            "pos": "2º",
+            "points": 150
+          },
+          {
+            "date": "2025/2026",
+            "event": "Campeonato Absoluto 2ª Categoría",
+            "pos": "4º",
+            "points": 180
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "2º",
+            "points": 150
+          }
+        ]
+      },
+      {
         "name": "Carlos Vicent",
-        "points": 680,
+        "points": 675,
         "club": "-",
         "realHistory": [
           {
@@ -2762,10 +2899,10 @@
             "points": 190
           },
           {
-            "date": "2025/2026",
-            "event": "4ª Prueba Autonómica",
-            "pos": "3º",
-            "points": 100
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "4º",
+            "points": 95
           },
           {
             "date": "2025/2026",
@@ -2833,33 +2970,27 @@
         ]
       },
       {
-        "name": "Alberto Bolos",
-        "points": 550,
+        "name": "Esteban Villalba Layunta",
+        "points": 560,
         "club": "-",
         "realHistory": [
           {
             "date": "20-21 Mar 2026",
             "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "2º",
-            "points": 150
-          },
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "7º",
-            "points": 70
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "2º",
-            "points": 150
+            "pos": "1º",
+            "points": 200
           },
           {
             "date": "2025/2026",
             "event": "Campeonato Absoluto 2ª Categoría",
-            "pos": "4º",
-            "points": 180
+            "pos": "5º",
+            "points": 160
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "1º",
+            "points": 200
           }
         ]
       },
@@ -2897,7 +3028,7 @@
       {
         "name": "Julio Latorre",
         "nationalRank": 76,
-        "points": 530,
+        "points": 540,
         "club": "Club OLYMPIA ALCOY",
         "realHistory": [
           {
@@ -2925,10 +3056,10 @@
             "points": 85
           },
           {
-            "date": "2025/2026",
-            "event": "4ª Prueba Autonómica",
-            "pos": "13º",
-            "points": 35
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "11º",
+            "points": 45
           },
           {
             "date": "2025/2026",
@@ -3007,56 +3138,6 @@
         ]
       },
       {
-        "name": "Javi Hernández Gil",
-        "points": 360,
-        "club": "Club Squash Valencia",
-        "realHistory": [
-          {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "5º",
-            "points": 90
-          },
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "3º",
-            "points": 100
-          },
-          {
-            "date": "2025/2026",
-            "event": "4ª Prueba Autonómica",
-            "pos": "2º",
-            "points": 150
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "16º",
-            "points": 20
-          }
-        ]
-      },
-      {
-        "name": "Esteban Villalba Layunta",
-        "points": 360,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "1º",
-            "points": 200
-          },
-          {
-            "date": "2025/2026",
-            "event": "Campeonato Absoluto 2ª Categoría",
-            "pos": "5º",
-            "points": 160
-          }
-        ]
-      },
-      {
         "name": "David Chelly",
         "points": 315,
         "club": "-",
@@ -3086,16 +3167,78 @@
             "points": 40
           },
           {
-            "date": "2025/2026",
-            "event": "4ª Prueba Autonómica",
-            "pos": "14º",
-            "points": 30
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "15º",
+            "points": 25
           },
           {
             "date": "2025/2026",
             "event": "5ª Prueba Autonómica",
             "pos": "15º",
             "points": 25
+          }
+        ]
+      },
+      {
+        "name": "Toni Molina Rochina",
+        "points": 315,
+        "club": "Club Squash Valencia",
+        "realHistory": [
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "11º",
+            "points": 45
+          },
+          {
+            "date": "2025/2026",
+            "event": "Master CV",
+            "pos": "12º",
+            "points": 80
+          },
+          {
+            "date": "2025/2026",
+            "event": "5ª Prueba Autonómica",
+            "pos": "13º",
+            "points": 35
+          },
+          {
+            "date": "2025/2026",
+            "event": "Campeonato Absoluto 2ª Categoría",
+            "pos": "9º",
+            "points": 120
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "13º",
+            "points": 35
+          }
+        ]
+      },
+      {
+        "name": "Inda Terol",
+        "points": 310,
+        "club": "Club OLYMPIA ALCOY",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "7º",
+            "points": 70
+          },
+          {
+            "date": "2025/2026",
+            "event": "Master CV",
+            "pos": "6º",
+            "points": 170
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "7º",
+            "points": 70
           }
         ]
       },
@@ -3125,33 +3268,76 @@
         ]
       },
       {
-        "name": "Toni Molina Rochina",
-        "points": 280,
+        "name": "Javi Hernández Gil",
+        "points": 300,
         "club": "Club Squash Valencia",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "5º",
+            "points": 90
+          },
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "3º",
+            "points": 100
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "5º",
+            "points": 90
+          },
+          {
+            "date": "2025/2026",
+            "event": "5ª Prueba Autonómica",
+            "pos": "16º",
+            "points": 20
+          }
+        ]
+      },
+      {
+        "name": "Victor Ferrero",
+        "points": 270,
+        "club": "-",
         "realHistory": [
           {
             "date": "20-21 Mar 2026",
             "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "15º",
+            "points": 25
+          },
+          {
+            "date": "2025/2026",
+            "event": "Master CV",
+            "pos": "13º",
+            "points": 70
+          },
+          {
+            "date": "2025/2026",
+            "event": "3ª Prueba Autonómica",
             "pos": "11º",
             "points": 45
           },
           {
             "date": "2025/2026",
-            "event": "Master CV",
-            "pos": "12º",
-            "points": 80
-          },
-          {
-            "date": "2025/2026",
             "event": "5ª Prueba Autonómica",
-            "pos": "13º",
-            "points": 35
+            "pos": "12º",
+            "points": 40
           },
           {
             "date": "2025/2026",
-            "event": "Campeonato Absoluto 2ª Categoría",
-            "pos": "9º",
-            "points": 120
+            "event": "6ª Prueba Autonómica",
+            "pos": "7º",
+            "points": 70
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "16º",
+            "points": 20
           }
         ]
       },
@@ -3182,58 +3368,39 @@
         ]
       },
       {
-        "name": "Victor Ferrero",
-        "points": 250,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "15º",
-            "points": 25
-          },
-          {
-            "date": "2025/2026",
-            "event": "Master CV",
-            "pos": "13º",
-            "points": 70
-          },
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "11º",
-            "points": 45
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "12º",
-            "points": 40
-          },
-          {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
-            "pos": "7º",
-            "points": 70
-          }
-        ]
-      },
-      {
-        "name": "Inda Terol",
+        "name": "Alvaro Garcia",
         "points": 240,
-        "club": "Club OLYMPIA ALCOY",
+        "club": "-",
         "realHistory": [
           {
             "date": "09-10 May 2026",
             "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "7º",
-            "points": 70
+            "pos": "10º",
+            "points": 50
+          },
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "18º",
+            "points": 10
+          },
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "17º",
+            "points": 10
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "6º",
+            "points": 85
           },
           {
             "date": "2025/2026",
-            "event": "Master CV",
+            "event": "6ª Prueba Autonómica",
             "pos": "6º",
-            "points": 170
+            "points": 85
           }
         ]
       },
@@ -3253,6 +3420,31 @@
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "6º",
             "points": 150
+          }
+        ]
+      },
+      {
+        "name": "Miguel Guerrero Moliner",
+        "points": 225,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "4º",
+            "points": 95
+          },
+          {
+            "date": "2025/2026",
+            "event": "5ª Prueba Autonómica",
+            "pos": "7º",
+            "points": 70
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "8º",
+            "points": 60
           }
         ]
       },
@@ -3315,58 +3507,33 @@
         ]
       },
       {
-        "name": "Miguel Guerrero Moliner",
-        "points": 165,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "4º",
-            "points": 95
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "7º",
-            "points": 70
-          }
-        ]
-      },
-      {
-        "name": "Alvaro Garcia",
-        "points": 165,
+        "name": "Eduardo Kuhnel",
+        "points": 195,
         "club": "-",
         "realHistory": [
           {
             "date": "09-10 May 2026",
             "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "10º",
-            "points": 50
+            "pos": "11º",
+            "points": 45
           },
           {
             "date": "20-21 Mar 2026",
             "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "18º",
-            "points": 10
-          },
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
             "pos": "17º",
             "points": 10
           },
           {
             "date": "2025/2026",
-            "event": "4ª Prueba Autonómica",
-            "pos": "21º",
-            "points": 10
+            "event": "Campeonato Absoluto 2ª Categoría",
+            "pos": "11º",
+            "points": 90
           },
           {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
-            "pos": "6º",
-            "points": 85
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "10º",
+            "points": 50
           }
         ]
       },
@@ -3422,27 +3589,21 @@
         ]
       },
       {
-        "name": "Eduardo Kuhnel",
-        "points": 145,
+        "name": "Jānis Melderis",
+        "points": 140,
         "club": "-",
         "realHistory": [
           {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "11º",
-            "points": 45
-          },
-          {
             "date": "20-21 Mar 2026",
             "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "17º",
-            "points": 10
+            "pos": "12º",
+            "points": 40
           },
           {
-            "date": "2025/2026",
-            "event": "Campeonato Absoluto 2ª Categoría",
-            "pos": "11º",
-            "points": 90
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "3º",
+            "points": 100
           }
         ]
       },
@@ -3462,6 +3623,25 @@
             "event": "4ª Prueba Autonómica",
             "pos": "6º",
             "points": 85
+          }
+        ]
+      },
+      {
+        "name": "Sascha Lichtenstein",
+        "points": 115,
+        "club": "Club Squash Valencia",
+        "realHistory": [
+          {
+            "date": "2025/2026",
+            "event": "5ª Prueba Autonómica",
+            "pos": "8º",
+            "points": 60
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "9º",
+            "points": 55
           }
         ]
       },
@@ -3614,19 +3794,6 @@
         ]
       },
       {
-        "name": "Sascha Lichtenstein",
-        "points": 60,
-        "club": "Club Squash Valencia",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "8º",
-            "points": 60
-          }
-        ]
-      },
-      {
         "name": "Victor Perez Boronat",
         "points": 60,
         "club": "-",
@@ -3667,6 +3834,56 @@
         ]
       },
       {
+        "name": "José Manuel López Doval",
+        "points": 55,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "21º",
+            "points": 10
+          },
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "13º",
+            "points": 35
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "18º",
+            "points": 10
+          }
+        ]
+      },
+      {
+        "name": "Dani Soriano",
+        "points": 55,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "13º",
+            "points": 35
+          },
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "25º",
+            "points": 10
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "19º",
+            "points": 10
+          }
+        ]
+      },
+      {
         "name": "Sergio García Bernardo",
         "points": 50,
         "club": "-",
@@ -3693,53 +3910,27 @@
         ]
       },
       {
-        "name": "José Manuel López Doval",
-        "points": 45,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "21º",
-            "points": 10
-          },
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "13º",
-            "points": 35
-          }
-        ]
-      },
-      {
-        "name": "Dani Soriano",
-        "points": 45,
+        "name": "Eduardo Francisco Kuehnel Pinto",
+        "points": 50,
         "club": "-",
         "realHistory": [
           {
             "date": "09-10 May 2026",
             "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "13º",
-            "points": 35
+            "pos": "14º",
+            "points": 30
           },
           {
             "date": "20-21 Mar 2026",
             "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "25º",
+            "pos": "20º",
             "points": 10
-          }
-        ]
-      },
-      {
-        "name": "Jānis Melderis",
-        "points": 40,
-        "club": "-",
-        "realHistory": [
+          },
           {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "12º",
-            "points": 40
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "20º",
+            "points": 10
           }
         ]
       },
@@ -3776,21 +3967,15 @@
         ]
       },
       {
-        "name": "Eduardo Francisco Kuehnel Pinto",
+        "name": "David Calvo",
         "points": 40,
         "club": "-",
         "realHistory": [
           {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "14º",
-            "points": 30
-          },
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "20º",
-            "points": 10
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "12º",
+            "points": 40
           }
         ]
       },
@@ -3803,6 +3988,19 @@
             "date": "2025/2026",
             "event": "Master CV",
             "pos": "5º",
+            "points": 30
+          }
+        ]
+      },
+      {
+        "name": "Pep Vicent",
+        "points": 30,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "14º",
             "points": 30
           }
         ]
@@ -3873,6 +4071,25 @@
         ]
       },
       {
+        "name": "Carlos Zafra Pastor",
+        "points": 20,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "22º",
+            "points": 10
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "17º",
+            "points": 10
+          }
+        ]
+      },
+      {
         "name": "Juan Hernández",
         "points": 15,
         "club": "-",
@@ -3894,19 +4111,6 @@
             "date": "20-21 Mar 2026",
             "event": "2ª Prueba Autonómica - Valencia",
             "pos": "19º",
-            "points": 10
-          }
-        ]
-      },
-      {
-        "name": "Carlos Zafra Pastor",
-        "points": 10,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "22º",
             "points": 10
           }
         ]
@@ -3980,7 +4184,7 @@
     "catJun": [
       {
         "name": "Alvaro Garcia",
-        "points": 700,
+        "points": 950,
         "club": "-",
         "realHistory": [
           {
@@ -4000,12 +4204,18 @@
             "event": "1ª Prueba Autonómica - Alcoy",
             "pos": "1º",
             "points": 200
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "2º",
+            "points": 250
           }
         ]
       },
       {
         "name": "Aleksander Sanchez Kuznetsov",
-        "points": 500,
+        "points": 670,
         "club": "-",
         "realHistory": [
           {
@@ -4025,6 +4235,100 @@
             "event": "1ª Prueba Autonómica - Alcoy",
             "pos": "2º",
             "points": 150
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "4º",
+            "points": 170
+          }
+        ]
+      },
+      {
+        "name": "Victor Sanchez Kuznetsov",
+        "points": 500,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "7º",
+            "points": 70
+          },
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "5º",
+            "points": 90
+          },
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "5º",
+            "points": 90
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "2º",
+            "points": 250
+          }
+        ]
+      },
+      {
+        "name": "Eduardo Kuhnel",
+        "points": 450,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "20-21 Mar 2026",
+            "event": "2ª Prueba Autonómica - Valencia",
+            "pos": "2º",
+            "points": 150
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "1º",
+            "points": 300
+          }
+        ]
+      },
+      {
+        "name": "DANIEL RUIZ DELGADO",
+        "points": 400,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "3º",
+            "points": 200
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "3º",
+            "points": 200
+          }
+        ]
+      },
+      {
+        "name": "Pep Vicent",
+        "points": 395,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "26-27 FEB 2026",
+            "event": "1ª Prueba Autonómica - Alcoy",
+            "pos": "4º",
+            "points": 95
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "1º",
+            "points": 300
           }
         ]
       },
@@ -4054,53 +4358,40 @@
         ]
       },
       {
-        "name": "Victor Sanchez Kuznetsov",
-        "points": 250,
+        "name": "Nico Samper",
+        "points": 285,
         "club": "-",
         "realHistory": [
-          {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "7º",
-            "points": 70
-          },
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "5º",
-            "points": 90
-          },
           {
             "date": "26-27 FEB 2026",
             "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "5º",
-            "points": 90
-          }
-        ]
-      },
-      {
-        "name": "DANIEL RUIZ DELGADO",
-        "points": 200,
-        "club": "-",
-        "realHistory": [
+            "pos": "6º",
+            "points": 85
+          },
           {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "3º",
             "points": 200
           }
         ]
       },
       {
-        "name": "Eduardo Kuhnel",
-        "points": 150,
+        "name": "Matías Correa Subiabre",
+        "points": 225,
         "club": "-",
         "realHistory": [
           {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "2º",
-            "points": 150
+            "date": "09-10 May 2026",
+            "event": "3ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "9º",
+            "points": 55
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "4º",
+            "points": 170
           }
         ]
       },
@@ -4137,6 +4428,19 @@
         ]
       },
       {
+        "name": "Guillem Marí",
+        "points": 120,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "5º",
+            "points": 120
+          }
+        ]
+      },
+      {
         "name": "ÁLVARO SICILIA MARTINEZ",
         "points": 100,
         "club": "-",
@@ -4146,32 +4450,6 @@
             "event": "3ª Prueba Autonómica - K7 (Paterna)",
             "pos": "6º",
             "points": 100
-          }
-        ]
-      },
-      {
-        "name": "Pep Vicent",
-        "points": 95,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "4º",
-            "points": 95
-          }
-        ]
-      },
-      {
-        "name": "Nico Samper",
-        "points": 85,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "6º",
-            "points": 85
           }
         ]
       },
@@ -4222,19 +4500,6 @@
           {
             "date": "26-27 FEB 2026",
             "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "9º",
-            "points": 55
-          }
-        ]
-      },
-      {
-        "name": "Matías Correa Subiabre",
-        "points": 55,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
             "pos": "9º",
             "points": 55
           }
