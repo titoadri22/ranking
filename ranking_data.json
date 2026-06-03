@@ -2808,37 +2808,6 @@
     ],
     "cat2": [
       {
-        "name": "Andrey Sergienko",
-        "points": 770,
-        "club": "Club Squash Valencia",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "7º",
-            "points": 70
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "3º",
-            "points": 100
-          },
-          {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
-            "pos": "1º",
-            "points": 200
-          },
-          {
-            "date": "2025/2026",
-            "event": "Campeonato Absoluto 2ª Categoría",
-            "pos": "1º",
-            "points": 400
-          }
-        ]
-      },
-      {
         "name": "Alberto Bolos",
         "points": 700,
         "club": "-",
@@ -2991,37 +2960,6 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "1º",
             "points": 200
-          }
-        ]
-      },
-      {
-        "name": "Carlos Villaplana Velasco",
-        "points": 545,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "09-10 May 2026",
-            "event": "3ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "1º",
-            "points": 200
-          },
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - Valencia",
-            "pos": "5º",
-            "points": 90
-          },
-          {
-            "date": "26-27 FEB 2026",
-            "event": "1ª Prueba Autonómica - Alcoy",
-            "pos": "1º",
-            "points": 200
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "9º",
-            "points": 55
           }
         ]
       },
