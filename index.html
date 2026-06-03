@@ -1172,7 +1172,7 @@
         let currentData = [];
 
         // Carga desde ranking_data.json externo
-        fetch('ranking_data.json')
+        fetch('ranking_data.json?v=' + Date.now())
             .then(r => r.json())
             .then(data => {
                 allData = data;
