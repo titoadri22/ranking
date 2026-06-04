@@ -1761,7 +1761,7 @@
     "cat1": [
       {
         "name": "Guillermo Pedernera",
-        "points": 1390,
+        "points": 1510,
         "club": "Club Squash Valencia",
         "birthDate": "1985-03-22",
         "realHistory": [
@@ -1770,6 +1770,12 @@
             "event": "3ª Prueba Autonómica - K7 (Paterna)",
             "pos": "4º",
             "points": 170
+          },
+          {
+            "date": "29-30 Mayo 2026",
+            "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "5º",
+            "points": 120
           },
           {
             "date": "20-21 Mar 2026",
@@ -2376,19 +2382,7 @@
           }
         ]
       },
-      {
-        "name": "GUILLERMO PEDERNERA",
-        "points": 120,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "29-30 Mayo 2026",
-            "event": "4ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "5º",
-            "points": 120
-          }
-        ]
-      },
+
       {
         "name": "Rafa Rodriguez",
         "points": 100,
