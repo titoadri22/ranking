@@ -1900,9 +1900,9 @@
       },
       {
         "name": "Pablo Sanchis Tatay",
-        "nationalRank": 59,
         "points": 1010,
         "club": "Club Squash Algemesí",
+        "nationalRank": 40,
         "realHistory": [
           {
             "date": "09-10 May 2026",
@@ -1981,9 +1981,9 @@
       },
       {
         "name": "Alex Boni",
-        "nationalRank": 42,
         "points": 850,
         "club": "Club Squash Valencia",
+        "nationalRank": 46,
         "realHistory": [
           {
             "date": "26-27 FEB 2026",
@@ -2075,9 +2075,9 @@
       },
       {
         "name": "Toni Molina Vera",
-        "nationalRank": 59,
         "points": 565,
         "club": "Club Squash Valencia",
+        "nationalRank": 94,
         "realHistory": [
           {
             "date": "09-10 May 2026",
@@ -2127,9 +2127,9 @@
         "name": "Ernesto Revert",
         "points": 550,
         "club": "Åsane Squash Klubb",
-        "isTop10Spain": true,
-        "nationalRank": 7,
         "birthDate": "1994-05-15",
+        "isTop10Spain": true,
+        "nationalRank": 8,
         "realHistory": [
           {
             "date": "09-10 May 2026",
@@ -2283,7 +2283,6 @@
       },
       {
         "name": "Paco Miró",
-        "nationalRank": 75,
         "points": 175,
         "club": "-",
         "realHistory": [
@@ -2367,6 +2366,7 @@
         "name": "Victor Rodríguez",
         "points": 140,
         "club": "Cuenca Squash Club",
+        "nationalRank": 172,
         "realHistory": [
           {
             "date": "20-21 Mar 2026",
@@ -2382,7 +2382,6 @@
           }
         ]
       },
-
       {
         "name": "Rafa Rodriguez",
         "points": 100,
@@ -2430,9 +2429,9 @@
       },
       {
         "name": "Carlos Jimenez",
-        "nationalRank": 73,
         "points": 70,
         "club": "-",
+        "nationalRank": 80,
         "realHistory": [
           {
             "date": "26-27 FEB 2026",
@@ -2483,9 +2482,9 @@
       },
       {
         "name": "Daniel Sanchez Pearson",
-        "nationalRank": 89,
         "points": 35,
         "club": "Squash Ciudad de Murcia",
+        "nationalRank": 86,
         "realHistory": [
           {
             "date": "26-27 FEB 2026",
@@ -2853,9 +2852,9 @@
       },
       {
         "name": "Antonio Cuixeres De la Fuente",
-        "nationalRank": 95,
         "points": 600,
         "club": "-",
+        "nationalRank": 112,
         "realHistory": [
           {
             "date": "2025/2026",
@@ -2954,7 +2953,6 @@
       },
       {
         "name": "Julio Latorre",
-        "nationalRank": 76,
         "points": 540,
         "club": "Club OLYMPIA ALCOY",
         "realHistory": [
@@ -3364,9 +3362,9 @@
       },
       {
         "name": "Juan Carlos Sanchez Serrano",
-        "nationalRank": 111,
         "points": 195,
         "club": "Club Squash Algemesí",
+        "nationalRank": 126,
         "realHistory": [
           {
             "date": "09-10 May 2026",
@@ -3415,9 +3413,9 @@
       },
       {
         "name": "Félix Sánchez Caparrós",
-        "nationalRank": 97,
         "points": 180,
         "club": "Club Náutico Aguadulce",
+        "nationalRank": 105,
         "realHistory": [
           {
             "date": "26-27 FEB 2026",
@@ -3635,9 +3633,9 @@
       },
       {
         "name": "Luis Miguel Alba Jimenez",
-        "nationalRank": 120,
         "points": 55,
         "club": "-",
+        "nationalRank": 126,
         "realHistory": [
           {
             "date": "26-27 FEB 2026",
@@ -4119,6 +4117,7 @@
         "name": "DANIEL RUIZ DELGADO",
         "points": 400,
         "club": "-",
+        "nationalRank": 95,
         "realHistory": [
           {
             "date": "09-10 May 2026",
