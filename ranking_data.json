@@ -1761,7 +1761,7 @@
     "cat1": [
       {
         "name": "Guillermo Pedernera",
-        "points": 1510,
+        "points": 1210,
         "club": "Club Squash Valencia",
         "birthDate": "1985-03-22",
         "realHistory": [
@@ -1784,12 +1784,6 @@
             "points": 170
           },
           {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "1º",
-            "points": 300
-          },
-          {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "2º",
@@ -1805,7 +1799,7 @@
       },
       {
         "name": "Javier Castillo",
-        "points": 1130,
+        "points": 950,
         "club": "-",
         "birthDate": "1998-11-10",
         "realHistory": [
@@ -1822,12 +1816,6 @@
             "points": 60
           },
           {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "2º",
-            "points": 250
-          },
-          {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "6º",
@@ -1838,12 +1826,18 @@
             "event": "Campeonato Absoluto CV - U. Alicante",
             "pos": "1º",
             "points": 600
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "7º",
+            "points": 70
           }
         ]
       },
       {
         "name": "Adrian Revert",
-        "points": 1050,
+        "points": 1180,
         "club": "Club Squash Algemesí",
         "isTop10Spain": true,
         "nationalRank": 10,
@@ -1873,12 +1867,6 @@
             "points": 250
           },
           {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "4º",
-            "points": 170
-          },
-          {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "4º",
@@ -1889,12 +1877,18 @@
             "event": "<b>Nº 2 Directo:</b> Top 10 Ranking Nacional (RN 9)",
             "pos": "-",
             "points": "-"
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "1º",
+            "points": 300
           }
         ]
       },
       {
         "name": "Pablo Sanchis Tatay",
-        "points": 1010,
+        "points": 1210,
         "club": "Club Squash Algemesí",
         "nationalRank": 40,
         "realHistory": [
@@ -1927,12 +1921,18 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "4º",
             "points": 170
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "3º",
+            "points": 200
           }
         ]
       },
       {
         "name": "Jamie Williams",
-        "points": 945,
+        "points": 890,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -1952,12 +1952,6 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "6º",
             "points": 100
-          },
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "9º",
-            "points": 55
           },
           {
             "date": "07-08 Nov 2025",
@@ -1995,7 +1989,7 @@
       },
       {
         "name": "Santiago Ramos",
-        "points": 750,
+        "points": 1000,
         "club": "-",
         "realHistory": [
           {
@@ -2015,12 +2009,18 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "3º",
             "points": 200
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "2º",
+            "points": 250
           }
         ]
       },
       {
         "name": "Guillermo Mongé",
-        "points": 665,
+        "points": 605,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -2042,12 +2042,6 @@
             "points": 170
           },
           {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "5º",
-            "points": 120
-          },
-          {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "9º",
@@ -2058,12 +2052,18 @@
             "event": "Campeonato Absoluto CV - U. Alicante",
             "pos": "5º",
             "points": 200
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "8º",
+            "points": 60
           }
         ]
       },
       {
         "name": "Toni Molina Vera",
-        "points": 565,
+        "points": 415,
         "club": "Club Squash Valencia",
         "nationalRank": 94,
         "realHistory": [
@@ -2086,12 +2086,6 @@
             "points": 55
           },
           {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "3º",
-            "points": 200
-          },
-          {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "13º",
@@ -2108,12 +2102,18 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "9º",
             "points": 55
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "10º",
+            "points": 50
           }
         ]
       },
       {
         "name": "Ernesto Revert",
-        "points": 550,
+        "points": 720,
         "club": "Åsane Squash Klubb",
         "birthDate": "1994-05-15",
         "isTop10Spain": true,
@@ -2136,12 +2136,18 @@
             "event": "<b>Nº 1 Directo:</b> Top 10 Ranking Nacional (RN 6)",
             "pos": "-",
             "points": "-"
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "4º",
+            "points": 170
           }
         ]
       },
       {
         "name": "Telmo Ildefonso",
-        "points": 540,
+        "points": 590,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -2155,12 +2161,6 @@
             "event": "2ª Prueba Autonómica - K7 (Paterna)",
             "pos": "6º",
             "points": 100
-          },
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "7º",
-            "points": 70
           },
           {
             "date": "07-08 Nov 2025",
@@ -2179,12 +2179,18 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "12º",
             "points": 40
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "5º",
+            "points": 120
           }
         ]
       },
       {
         "name": "Pablo de Grado",
-        "points": 480,
+        "points": 380,
         "club": "-",
         "realHistory": [
           {
@@ -2206,12 +2212,6 @@
             "points": 45
           },
           {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "6º",
-            "points": 100
-          },
-          {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "10º",
@@ -2227,15 +2227,9 @@
       },
       {
         "name": "Alejandro Sanchez Sabido",
-        "points": 190,
+        "points": 130,
         "club": "-",
         "realHistory": [
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "8º",
-            "points": 60
-          },
           {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
@@ -2290,7 +2284,7 @@
       },
       {
         "name": "Rubén Avendaño",
-        "points": 120,
+        "points": 165,
         "club": "-",
         "realHistory": [
           {
@@ -2310,23 +2304,23 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "14º",
             "points": 30
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "11º",
+            "points": 45
           }
         ]
       },
       {
         "name": "Jacobo Montava",
-        "points": 90,
+        "points": 45,
         "club": "Club Olympia Alcoy",
         "realHistory": [
           {
             "date": "27-28 Feb 2026",
             "event": "1ª Prueba Autonómica - Olympia (Alcoy)",
-            "pos": "11º",
-            "points": 45
-          },
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
             "pos": "11º",
             "points": 45
           }
@@ -2367,7 +2361,7 @@
       },
       {
         "name": "Andrey Sergienko",
-        "points": 85,
+        "points": 140,
         "club": "-",
         "realHistory": [
           {
@@ -2381,6 +2375,12 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "13º",
             "points": 35
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "9º",
+            "points": 55
           }
         ]
       },
@@ -2400,20 +2400,13 @@
       },
       {
         "name": "Vicente Cubells Cuesta",
-        "points": 50,
+        "points": 0,
         "club": "-",
-        "realHistory": [
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "10º",
-            "points": 50
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Carlos Villaplana Velasco",
-        "points": 50,
+        "points": 150,
         "club": "-",
         "realHistory": [
           {
@@ -2421,6 +2414,12 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "10º",
             "points": 50
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "6º",
+            "points": 100
           }
         ]
       },
@@ -2455,7 +2454,7 @@
     "catFem": [
       {
         "name": "Daria Bogdanova",
-        "points": 1750,
+        "points": 1500,
         "club": "-",
         "birthDate": "1999-01-20",
         "realHistory": [
@@ -2478,12 +2477,6 @@
             "points": 250
           },
           {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "2º",
-            "points": 250
-          },
-          {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "2º",
@@ -2499,7 +2492,7 @@
       },
       {
         "name": "Alicia Ferrer Sáez",
-        "points": 1160,
+        "points": 960,
         "club": "-",
         "realHistory": [
           {
@@ -2511,12 +2504,6 @@
           {
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "3º",
-            "points": 200
-          },
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
             "pos": "3º",
             "points": 200
           },
@@ -2536,15 +2523,9 @@
       },
       {
         "name": "Chantal Pitarch",
-        "points": 900,
+        "points": 600,
         "club": "-",
         "realHistory": [
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "1º",
-            "points": 300
-          },
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
@@ -2606,7 +2587,7 @@
       },
       {
         "name": "Paula Company Anchel",
-        "points": 290,
+        "points": 120,
         "club": "-",
         "realHistory": [
           {
@@ -2614,12 +2595,6 @@
             "event": "2ª Prueba Autonómica - K7 (Paterna)",
             "pos": "5º",
             "points": 120
-          },
-          {
-            "date": "17-19 Oct 2025",
-            "event": "5ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "4º",
-            "points": 170
           }
         ]
       },
@@ -2697,33 +2672,8 @@
     ],
     "cat2": [
       {
-        "name": "Andrey Sergienko",
-        "points": 700,
-        "club": "Club Squash Valencia",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "3º",
-            "points": 100
-          },
-          {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
-            "pos": "1º",
-            "points": 200
-          },
-          {
-            "date": "2025/2026",
-            "event": "Campeonato Absoluto 2ª Categoría",
-            "pos": "1º",
-            "points": 400
-          }
-        ]
-      },
-      {
         "name": "Alberto Bolos",
-        "points": 700,
+        "points": 640,
         "club": "-",
         "realHistory": [
           {
@@ -2740,12 +2690,6 @@
           },
           {
             "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "2º",
-            "points": 150
-          },
-          {
-            "date": "2025/2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "4º",
             "points": 180
@@ -2755,12 +2699,18 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "2º",
             "points": 150
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "5º",
+            "points": 90
           }
         ]
       },
       {
         "name": "Carlos Vicent",
-        "points": 675,
+        "points": 580,
         "club": "-",
         "realHistory": [
           {
@@ -2789,12 +2739,6 @@
           },
           {
             "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "4º",
-            "points": 95
-          },
-          {
-            "date": "2025/2026",
             "event": "6ª Prueba Autonómica",
             "pos": "3º",
             "points": 100
@@ -2803,7 +2747,7 @@
       },
       {
         "name": "Antonio Cuixeres De la Fuente",
-        "points": 600,
+        "points": 750,
         "club": "-",
         "nationalRank": 112,
         "realHistory": [
@@ -2818,6 +2762,12 @@
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "3º",
             "points": 200
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "2º",
+            "points": 150
           }
         ]
       },
@@ -2872,39 +2822,8 @@
         ]
       },
       {
-        "name": "Carlos Villaplana Velasco",
-        "points": 545,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "08-09 May 2026",
-            "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
-            "pos": "1º",
-            "points": 200
-          },
-          {
-            "date": "20-21 Mar 2026",
-            "event": "2ª Prueba Autonómica - K7 (Paterna)",
-            "pos": "5º",
-            "points": 90
-          },
-          {
-            "date": "27-28 Feb 2026",
-            "event": "1ª Prueba Autonómica - Olympia (Alcoy)",
-            "pos": "1º",
-            "points": 200
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "9º",
-            "points": 55
-          }
-        ]
-      },
-      {
         "name": "Julio Latorre",
-        "points": 455,
+        "points": 415,
         "club": "Club OLYMPIA ALCOY",
         "realHistory": [
           {
@@ -2933,15 +2852,15 @@
           },
           {
             "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "6º",
-            "points": 85
-          },
-          {
-            "date": "2025/2026",
             "event": "6ª Prueba Autonómica",
             "pos": "4º",
             "points": 95
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "11º",
+            "points": 45
           }
         ]
       },
@@ -2972,7 +2891,7 @@
       },
       {
         "name": "David Chelly",
-        "points": 275,
+        "points": 250,
         "club": "-",
         "realHistory": [
           {
@@ -2998,18 +2917,12 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "15º",
             "points": 25
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "15º",
-            "points": 25
           }
         ]
       },
       {
         "name": "Toni Molina Rochina",
-        "points": 315,
+        "points": 280,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -3023,12 +2936,6 @@
             "event": "Master CV",
             "pos": "12º",
             "points": 80
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "13º",
-            "points": 35
           },
           {
             "date": "2025/2026",
@@ -3071,7 +2978,7 @@
       },
       {
         "name": "Ricardo Belda",
-        "points": 250,
+        "points": 50,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -3079,18 +2986,12 @@
             "event": "2ª Prueba Autonómica - K7 (Paterna)",
             "pos": "10º",
             "points": 50
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "1º",
-            "points": 200
           }
         ]
       },
       {
         "name": "Javi Hernández Gil",
-        "points": 300,
+        "points": 280,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -3110,18 +3011,12 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "5º",
             "points": 90
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "16º",
-            "points": 20
           }
         ]
       },
       {
         "name": "Manolo Candalija Belmonte",
-        "points": 295,
+        "points": 290,
         "club": "-",
         "realHistory": [
           {
@@ -3137,16 +3032,16 @@
             "points": 150
           },
           {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "5º",
-            "points": 90
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "6º",
+            "points": 85
           }
         ]
       },
       {
         "name": "Victor Ferrero",
-        "points": 225,
+        "points": 185,
         "club": "-",
         "realHistory": [
           {
@@ -3160,12 +3055,6 @@
             "event": "Master CV",
             "pos": "13º",
             "points": 70
-          },
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "12º",
-            "points": 40
           },
           {
             "date": "2025/2026",
@@ -3183,7 +3072,7 @@
       },
       {
         "name": "Alvaro Garcia",
-        "points": 240,
+        "points": 310,
         "club": "-",
         "realHistory": [
           {
@@ -3215,12 +3104,18 @@
             "event": "6ª Prueba Autonómica",
             "pos": "6º",
             "points": 85
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "7º",
+            "points": 70
           }
         ]
       },
       {
         "name": "Pablo Aranda Navarro",
-        "points": 235,
+        "points": 275,
         "club": "-",
         "realHistory": [
           {
@@ -3234,12 +3129,18 @@
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "6º",
             "points": 150
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "12º",
+            "points": 40
           }
         ]
       },
       {
         "name": "Miguel Guerrero Moliner",
-        "points": 225,
+        "points": 215,
         "club": "-",
         "realHistory": [
           {
@@ -3249,14 +3150,14 @@
             "points": 95
           },
           {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "7º",
-            "points": 70
-          },
-          {
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
+            "pos": "8º",
+            "points": 60
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "8º",
             "points": 60
           }
@@ -3309,7 +3210,7 @@
       },
       {
         "name": "Eduardo Kuhnel",
-        "points": 195,
+        "points": 250,
         "club": "-",
         "realHistory": [
           {
@@ -3335,6 +3236,12 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "10º",
             "points": 50
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "9º",
+            "points": 55
           }
         ]
       },
@@ -3360,7 +3267,7 @@
       },
       {
         "name": "Lorenzo Sanchez Martinez",
-        "points": 155,
+        "points": 255,
         "club": "-",
         "realHistory": [
           {
@@ -3374,12 +3281,18 @@
             "event": "2ª Prueba Autonómica - K7 (Paterna)",
             "pos": "7º",
             "points": 70
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "3º",
+            "points": 100
           }
         ]
       },
       {
         "name": "Jose Bay",
-        "points": 150,
+        "points": 200,
         "club": "-",
         "realHistory": [
           {
@@ -3387,6 +3300,12 @@
             "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "2º",
             "points": 150
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "10º",
+            "points": 50
           }
         ]
       },
@@ -3411,15 +3330,9 @@
       },
       {
         "name": "Sascha Lichtenstein",
-        "points": 115,
+        "points": 55,
         "club": "Club Squash Valencia",
         "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "8º",
-            "points": 60
-          },
           {
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
@@ -3438,19 +3351,6 @@
             "event": "Master CV",
             "pos": "9º",
             "points": 110
-          }
-        ]
-      },
-      {
-        "name": "Eduardo Kuehnel",
-        "points": 100,
-        "club": "-",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "Campeonato Absoluto 2ª Categoría",
-            "pos": "10º",
-            "points": 100
           }
         ]
       },
@@ -3505,12 +3405,6 @@
             "points": 70
           }
         ]
-      },
-      {
-        "name": "Eduardo F. Kuehnel Pinto",
-        "points": 0,
-        "club": "-",
-        "realHistory": []
       },
       {
         "name": "Marko Baietan",
@@ -3617,22 +3511,22 @@
       },
       {
         "name": "Chantal Pitarch",
-        "points": 50,
+        "points": 0,
         "club": "-",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "5ª Prueba Autonómica",
-            "pos": "10º",
-            "points": 50
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Jose Leon",
-        "points": 0,
+        "points": 35,
         "club": "Illice Squash Club",
-        "realHistory": []
+        "realHistory": [
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "13º",
+            "points": 35
+          }
+        ]
       },
       {
         "name": "Sergio García Bernardo",
@@ -3662,7 +3556,7 @@
       },
       {
         "name": "Eduardo Francisco Kuehnel Pinto",
-        "points": 50,
+        "points": 150,
         "club": "-",
         "realHistory": [
           {
@@ -3682,6 +3576,12 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "20º",
             "points": 10
+          },
+          {
+            "date": "2025/2026",
+            "event": "Campeonato Absoluto 2ª Categoría",
+            "pos": "10º",
+            "points": 100
           }
         ]
       },
@@ -3921,6 +3821,45 @@
         "points": 0,
         "club": "-",
         "realHistory": []
+      },
+      {
+        "name": "Luis Marin Ederra",
+        "points": 200,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "1º",
+            "points": 200
+          }
+        ]
+      },
+      {
+        "name": "Daniel Miralles",
+        "points": 95,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "4º",
+            "points": 95
+          }
+        ]
+      },
+      {
+        "name": "Nicolás Correa",
+        "points": 30,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "14º",
+            "points": 30
+          }
+        ]
       }
     ],
     "catJun": [
@@ -3933,7 +3872,7 @@
             "date": "08-09 May 2026",
             "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "1º",
-            "points": 300
+            "points": 200
           },
           {
             "date": "20-21 Mar 2026",
@@ -3951,20 +3890,26 @@
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "2º",
-            "points": 250
+            "points": 150
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "1º",
+            "points": 200
           }
         ]
       },
       {
         "name": "Aleksander Sanchez Kuznetsov",
-        "points": 670,
+        "points": 590,
         "club": "-",
         "realHistory": [
           {
             "date": "08-09 May 2026",
             "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "2º",
-            "points": 250
+            "points": 150
           },
           {
             "date": "20-21 Mar 2026",
@@ -3982,7 +3927,13 @@
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "4º",
-            "points": 170
+            "points": 95
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "4º",
+            "points": 95
           }
         ]
       },
@@ -4001,13 +3952,19 @@
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "1º",
-            "points": 300
+            "points": 200
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "3º",
+            "points": 100
           }
         ]
       },
       {
         "name": "DANIEL RUIZ DELGADO",
-        "points": 400,
+        "points": 350,
         "club": "-",
         "nationalRank": 95,
         "realHistory": [
@@ -4015,26 +3972,32 @@
             "date": "08-09 May 2026",
             "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "3º",
-            "points": 200
+            "points": 100
           },
           {
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "3º",
-            "points": 200
+            "points": 100
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "2º",
+            "points": 150
           }
         ]
       },
       {
         "name": "Quique Colomina Daroca",
-        "points": 365,
+        "points": 375,
         "club": "-",
         "realHistory": [
           {
             "date": "08-09 May 2026",
             "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "4º",
-            "points": 170
+            "points": 95
           },
           {
             "date": "20-21 Mar 2026",
@@ -4047,12 +4010,18 @@
             "event": "1ª Prueba Autonómica - Olympia (Alcoy)",
             "pos": "3º",
             "points": 100
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "6º",
+            "points": 85
           }
         ]
       },
       {
         "name": "Victor Sanchez Kuznetsov",
-        "points": 350,
+        "points": 425,
         "club": "-",
         "realHistory": [
           {
@@ -4077,13 +4046,19 @@
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "6º",
-            "points": 100
+            "points": 85
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "5º",
+            "points": 90
           }
         ]
       },
       {
         "name": "Pep Vicent",
-        "points": 215,
+        "points": 185,
         "club": "-",
         "realHistory": [
           {
@@ -4096,7 +4071,7 @@
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "5º",
-            "points": 120
+            "points": 90
           }
         ]
       },
@@ -4140,20 +4115,20 @@
       },
       {
         "name": "IRUNE CLEMENTE RODRIGUEZ",
-        "points": 120,
+        "points": 90,
         "club": "-",
         "realHistory": [
           {
             "date": "08-09 May 2026",
             "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "5º",
-            "points": 120
+            "points": 90
           }
         ]
       },
       {
         "name": "Matías Correa Subiabre",
-        "points": 115,
+        "points": 175,
         "club": "-",
         "realHistory": [
           {
@@ -4167,19 +4142,25 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "8º",
             "points": 60
+          },
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "8º",
+            "points": 60
           }
         ]
       },
       {
         "name": "ÁLVARO SICILIA MARTINEZ",
-        "points": 100,
+        "points": 85,
         "club": "-",
         "realHistory": [
           {
             "date": "08-09 May 2026",
             "event": "3ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "6º",
-            "points": 100
+            "points": 85
           }
         ]
       },
@@ -4245,6 +4226,19 @@
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "9º",
             "points": 55
+          }
+        ]
+      },
+      {
+        "name": "Lara Kalaji",
+        "points": 70,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "30-31 Oct 2026",
+            "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
+            "pos": "7º",
+            "points": 70
           }
         ]
       }
