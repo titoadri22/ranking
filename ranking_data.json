@@ -128,7 +128,7 @@
           },
           {
             "date": "NORMATIVA",
-            "event": "<b>Nº 2 Directo:</b> Top 10 Ranking Nacional (RN 9)",
+            "event": "<b>Nº 2 Directo:</b> Top 10 Ranking Nacional (RN 10)",
             "pos": "-",
             "points": "-"
           }
@@ -136,7 +136,7 @@
       },
       {
         "name": "Guillermo Mongé",
-        "points": 995,
+        "points": 935,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -178,8 +178,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "5º",
-            "points": 200
+            "pos": "6º",
+            "points": 140
           }
         ]
       },
@@ -223,7 +223,7 @@
       {
         "name": "Toni Molina Vera",
         "nationalRank": 59,
-        "points": 685,
+        "points": 655,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -253,8 +253,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "8º",
-            "points": 110
+            "pos": "9º",
+            "points": 80
           }
         ]
       },
@@ -280,7 +280,7 @@
           },
           {
             "date": "NORMATIVA",
-            "event": "<b>Nº 1 Directo:</b> Top 10 Ranking Nacional (RN 6)",
+            "event": "<b>Nº 1 Directo:</b> Top 10 Ranking Nacional (RN 7)",
             "pos": "-",
             "points": "-"
           }
@@ -328,7 +328,7 @@
       {
         "name": "Pablo Sanchis Tatay",
         "nationalRank": 59,
-        "points": 490,
+        "points": 450,
         "club": "Club Squash Algemesí",
         "realHistory": [
           {
@@ -346,27 +346,33 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "4º",
-            "points": 240
+            "pos": "5º",
+            "points": 200
           }
         ]
       },
       {
         "name": "Daniel Tarazona Cebollada",
-        "points": 460,
+        "points": 360,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
             "date": "21-22 Mar 2025",
             "event": "2ª Prueba Autonómica - Olympia (Alcoy)",
             "pos": "5º",
-            "points": 460
+            "points": 120
+          },
+          {
+            "date": "07-08 Nov 2025",
+            "event": "Campeonato Absoluto CV - U. Alicante",
+            "pos": "4º",
+            "points": 240
           }
         ]
       },
       {
         "name": "Telmo Ildefonso",
-        "points": 445,
+        "points": 425,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -396,14 +402,14 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "6º",
-            "points": 140
+            "pos": "7º",
+            "points": 120
           }
         ]
       },
       {
         "name": "Pablo de Grado",
-        "points": 385,
+        "points": 375,
         "club": "-",
         "realHistory": [
           {
@@ -433,8 +439,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "7º",
-            "points": 120
+            "pos": "8º",
+            "points": 110
           }
         ]
       },
@@ -485,7 +491,7 @@
       {
         "name": "Paco Miró",
         "nationalRank": 75,
-        "points": 170,
+        "points": 90,
         "club": "-",
         "realHistory": [
           {
@@ -499,12 +505,6 @@
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "11º",
             "points": 45
-          },
-          {
-            "date": "07-08 Nov 2025",
-            "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "9º",
-            "points": 80
           }
         ]
       },
@@ -659,7 +659,7 @@
     "catFem": [
       {
         "name": "Daria Bogdanova",
-        "points": 1200,
+        "points": 1150,
         "club": "-",
         "birthDate": "1999-01-20",
         "realHistory": [
@@ -678,8 +678,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
-            "pos": "2º",
-            "points": 250
+            "pos": "3º",
+            "points": 200
           },
           {
             "date": "07-08 Nov 2025",
@@ -741,7 +741,7 @@
       },
       {
         "name": "Thais Miralles",
-        "points": 850,
+        "points": 900,
         "club": "-",
         "realHistory": [
           {
@@ -753,8 +753,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
-            "pos": "3º",
-            "points": 200
+            "pos": "2º",
+            "points": 250
           },
           {
             "date": "07-08 Nov 2025",
@@ -1753,6 +1753,19 @@
             "points": 10
           }
         ]
+      },
+      {
+        "name": "Eduardo Kuhnel",
+        "points": 60,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "2025/2026",
+            "event": "6ª Prueba Autonómica",
+            "pos": "8º",
+            "points": 60
+          }
+        ]
       }
     ],
     "catJun": []
@@ -1874,7 +1887,7 @@
           },
           {
             "date": "NORMATIVA",
-            "event": "<b>Nº 2 Directo:</b> Top 10 Ranking Nacional (RN 9)",
+            "event": "<b>Nº 2 Directo:</b> Top 10 Ranking Nacional (RN 10)",
             "pos": "-",
             "points": "-"
           },
@@ -1888,7 +1901,7 @@
       },
       {
         "name": "Pablo Sanchis Tatay",
-        "points": 1210,
+        "points": 1170,
         "club": "Club Squash Algemesí",
         "nationalRank": 40,
         "realHistory": [
@@ -1913,8 +1926,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "4º",
-            "points": 240
+            "pos": "5º",
+            "points": 200
           },
           {
             "date": "29-30 May 2026",
@@ -2020,7 +2033,7 @@
       },
       {
         "name": "Guillermo Mongé",
-        "points": 605,
+        "points": 545,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -2050,8 +2063,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "5º",
-            "points": 200
+            "pos": "6º",
+            "points": 140
           },
           {
             "date": "30-31 Oct 2026",
@@ -2063,7 +2076,7 @@
       },
       {
         "name": "Toni Molina Vera",
-        "points": 415,
+        "points": 385,
         "club": "Club Squash Valencia",
         "nationalRank": 94,
         "realHistory": [
@@ -2094,8 +2107,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "8º",
-            "points": 110
+            "pos": "9º",
+            "points": 80
           },
           {
             "date": "29-30 May 2026",
@@ -2133,7 +2146,7 @@
           },
           {
             "date": "NORMATIVA",
-            "event": "<b>Nº 1 Directo:</b> Top 10 Ranking Nacional (RN 6)",
+            "event": "<b>Nº 1 Directo:</b> Top 10 Ranking Nacional (RN 8)",
             "pos": "-",
             "points": "-"
           },
@@ -2147,7 +2160,7 @@
       },
       {
         "name": "Telmo Ildefonso",
-        "points": 590,
+        "points": 570,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -2171,8 +2184,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "6º",
-            "points": 140
+            "pos": "7º",
+            "points": 120
           },
           {
             "date": "29-30 May 2026",
@@ -2190,7 +2203,7 @@
       },
       {
         "name": "Pablo de Grado",
-        "points": 380,
+        "points": 370,
         "club": "-",
         "realHistory": [
           {
@@ -2220,8 +2233,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "7º",
-            "points": 120
+            "pos": "8º",
+            "points": 110
           }
         ]
       },
@@ -2259,7 +2272,7 @@
       },
       {
         "name": "Paco Miró",
-        "points": 175,
+        "points": 95,
         "club": "-",
         "realHistory": [
           {
@@ -2273,12 +2286,6 @@
             "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "11º",
             "points": 45
-          },
-          {
-            "date": "07-08 Nov 2025",
-            "event": "Campeonato Absoluto CV - U. Alicante",
-            "pos": "9º",
-            "points": 80
           }
         ]
       },
@@ -2449,12 +2456,25 @@
             "points": 35
           }
         ]
+      },
+      {
+        "name": "Daniel Tarazona Cebollada",
+        "points": 240,
+        "club": "-",
+        "realHistory": [
+          {
+            "date": "07-08 Nov 2025",
+            "event": "Campeonato Absoluto CV - U. Alicante",
+            "pos": "4º",
+            "points": 240
+          }
+        ]
       }
     ],
     "catFem": [
       {
         "name": "Daria Bogdanova",
-        "points": 1500,
+        "points": 1450,
         "club": "-",
         "birthDate": "1999-01-20",
         "realHistory": [
@@ -2479,8 +2499,8 @@
           {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
-            "pos": "2º",
-            "points": 250
+            "pos": "3º",
+            "points": 200
           },
           {
             "date": "07-08 Nov 2025",
@@ -2536,14 +2556,14 @@
       },
       {
         "name": "Thais Miralles",
-        "points": 600,
+        "points": 650,
         "club": "-",
         "realHistory": [
           {
             "date": "07-08 Nov 2025",
             "event": "6ª Prueba Autonómica - Tenisquash",
-            "pos": "3º",
-            "points": 200
+            "pos": "2º",
+            "points": 250
           },
           {
             "date": "07-08 Nov 2025",
@@ -2689,7 +2709,7 @@
             "points": 70
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "4º",
             "points": 180
@@ -2738,8 +2758,8 @@
             "points": 95
           },
           {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "3º",
             "points": 100
           }
@@ -2758,7 +2778,7 @@
             "points": 400
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "3º",
             "points": 200
@@ -2789,7 +2809,7 @@
             "points": 200
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "2º",
             "points": 300
@@ -2808,7 +2828,7 @@
             "points": 200
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "5º",
             "points": 160
@@ -2851,8 +2871,8 @@
             "points": 45
           },
           {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "4º",
             "points": 95
           },
@@ -2876,13 +2896,13 @@
             "points": 40
           },
           {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "2º",
             "points": 150
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "8º",
             "points": 130
@@ -2938,7 +2958,7 @@
             "points": 80
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "9º",
             "points": 120
@@ -3057,8 +3077,8 @@
             "points": 70
           },
           {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "7º",
             "points": 70
           },
@@ -3100,8 +3120,8 @@
             "points": 85
           },
           {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "6º",
             "points": 85
           },
@@ -3125,7 +3145,7 @@
             "points": 85
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "6º",
             "points": 150
@@ -3181,7 +3201,7 @@
             "points": 30
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "7º",
             "points": 140
@@ -3210,7 +3230,7 @@
       },
       {
         "name": "Eduardo Kuhnel",
-        "points": 250,
+        "points": 310,
         "club": "-",
         "realHistory": [
           {
@@ -3226,7 +3246,7 @@
             "points": 10
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "11º",
             "points": 90
@@ -3242,6 +3262,12 @@
             "event": "5ª Prueba Autonómica - Tenisquash (Alzira)",
             "pos": "9º",
             "points": 55
+          },
+          {
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
+            "pos": "8º",
+            "points": 60
           }
         ]
       },
@@ -3258,8 +3284,8 @@
             "points": 90
           },
           {
-            "date": "2025/2026",
-            "event": "6ª Prueba Autonómica",
+            "date": "07-08 Nov 2025",
+            "event": "6ª Prueba Autonómica - Tenisquash",
             "pos": "5º",
             "points": 90
           }
@@ -3386,7 +3412,7 @@
         "club": "-",
         "realHistory": [
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "12º",
             "points": 80
@@ -3399,7 +3425,7 @@
         "club": "-",
         "realHistory": [
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "13º",
             "points": 70
@@ -3438,7 +3464,7 @@
         "club": "-",
         "realHistory": [
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "14º",
             "points": 60
@@ -3547,7 +3573,7 @@
         "club": "-",
         "realHistory": [
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "15º",
             "points": 50
@@ -3578,7 +3604,7 @@
             "points": 10
           },
           {
-            "date": "2025/2026",
+            "date": "17-18 Abr 2026",
             "event": "Campeonato Absoluto 2ª Categoría",
             "pos": "10º",
             "points": 100
