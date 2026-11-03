@@ -1805,7 +1805,7 @@
       },
       {
         "name": "Javier Castillo",
-        "points": 1190,
+        "points": 1130,
         "club": "-",
         "birthDate": "1998-11-10",
         "realHistory": [
@@ -1814,12 +1814,6 @@
             "event": "2ª Prueba Autonómica - K7 (Paterna)",
             "pos": "5º",
             "points": 120
-          },
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "8º",
-            "points": 60
           },
           {
             "date": "29-30 May 2026",
@@ -1981,7 +1975,7 @@
       },
       {
         "name": "Alex Boni",
-        "points": 850,
+        "points": 550,
         "club": "Club Squash Valencia",
         "nationalRank": 46,
         "realHistory": [
@@ -1990,12 +1984,6 @@
             "event": "1ª Prueba Autonómica - Olympia (Alcoy)",
             "pos": "2º",
             "points": 250
-          },
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "1º",
-            "points": 300
           },
           {
             "date": "29-30 May 2026",
@@ -2239,15 +2227,9 @@
       },
       {
         "name": "Alejandro Sanchez Sabido",
-        "points": 310,
+        "points": 190,
         "club": "-",
         "realHistory": [
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "5º",
-            "points": 120
-          },
           {
             "date": "17-19 Oct 2025",
             "event": "5ª Prueba Autonómica - K7 (Paterna)",
@@ -2308,7 +2290,7 @@
       },
       {
         "name": "Rubén Avendaño",
-        "points": 170,
+        "points": 120,
         "club": "-",
         "realHistory": [
           {
@@ -2324,12 +2306,6 @@
             "points": 40
           },
           {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "10º",
-            "points": 50
-          },
-          {
             "date": "29-30 May 2026",
             "event": "4ª Prueba Autonómica - K7 (Paterna)",
             "pos": "14º",
@@ -2339,7 +2315,7 @@
       },
       {
         "name": "Jacobo Montava",
-        "points": 145,
+        "points": 90,
         "club": "Club Olympia Alcoy",
         "realHistory": [
           {
@@ -2347,12 +2323,6 @@
             "event": "1ª Prueba Autonómica - Olympia (Alcoy)",
             "pos": "11º",
             "points": 45
-          },
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "9º",
-            "points": 55
           },
           {
             "date": "17-19 Oct 2025",
@@ -2364,7 +2334,7 @@
       },
       {
         "name": "Victor Rodríguez",
-        "points": 140,
+        "points": 70,
         "club": "Cuenca Squash Club",
         "nationalRank": 172,
         "realHistory": [
@@ -2373,27 +2343,14 @@
             "event": "2ª Prueba Autonómica - K7 (Paterna)",
             "pos": "7º",
             "points": 70
-          },
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "7º",
-            "points": 70
           }
         ]
       },
       {
         "name": "Rafa Rodriguez",
-        "points": 100,
+        "points": 0,
         "club": "Cuenca Squash Club",
-        "realHistory": [
-          {
-            "date": "23-24 May 2025",
-            "event": "3ª Prueba Autonómica - Tenisquash",
-            "pos": "6º",
-            "points": 100
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Angel Giron Descalzo",
@@ -2741,15 +2698,9 @@
     "cat2": [
       {
         "name": "Andrey Sergienko",
-        "points": 770,
+        "points": 700,
         "club": "Club Squash Valencia",
         "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "7º",
-            "points": 70
-          },
           {
             "date": "2025/2026",
             "event": "5ª Prueba Autonómica",
@@ -2953,7 +2904,7 @@
       },
       {
         "name": "Julio Latorre",
-        "points": 540,
+        "points": 455,
         "club": "Club OLYMPIA ALCOY",
         "realHistory": [
           {
@@ -2973,12 +2924,6 @@
             "event": "Master CV",
             "pos": "10º",
             "points": 100
-          },
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "6º",
-            "points": 85
           },
           {
             "date": "29-30 May 2026",
@@ -3027,7 +2972,7 @@
       },
       {
         "name": "David Chelly",
-        "points": 315,
+        "points": 275,
         "club": "-",
         "realHistory": [
           {
@@ -3047,12 +2992,6 @@
             "event": "Master CV",
             "pos": "8º",
             "points": 120
-          },
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "12º",
-            "points": 40
           },
           {
             "date": "29-30 May 2026",
@@ -3132,7 +3071,7 @@
       },
       {
         "name": "Ricardo Belda",
-        "points": 305,
+        "points": 250,
         "club": "Club Squash Valencia",
         "realHistory": [
           {
@@ -3140,12 +3079,6 @@
             "event": "2ª Prueba Autonómica - K7 (Paterna)",
             "pos": "10º",
             "points": 50
-          },
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "9º",
-            "points": 55
           },
           {
             "date": "2025/2026",
@@ -3213,7 +3146,7 @@
       },
       {
         "name": "Victor Ferrero",
-        "points": 270,
+        "points": 225,
         "club": "-",
         "realHistory": [
           {
@@ -3227,12 +3160,6 @@
             "event": "Master CV",
             "pos": "13º",
             "points": 70
-          },
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "11º",
-            "points": 45
           },
           {
             "date": "2025/2026",
@@ -3581,16 +3508,9 @@
       },
       {
         "name": "Eduardo F. Kuehnel Pinto",
-        "points": 60,
+        "points": 0,
         "club": "-",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "8º",
-            "points": 60
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Marko Baietan",
@@ -3710,16 +3630,9 @@
       },
       {
         "name": "Jose Leon",
-        "points": 50,
+        "points": 0,
         "club": "Illice Squash Club",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "10º",
-            "points": 50
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Sergio García Bernardo",
@@ -3813,16 +3726,9 @@
       },
       {
         "name": "Jesús Pérez",
-        "points": 35,
+        "points": 0,
         "club": "Club d'Esquaix l'Alcúdia",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "13º",
-            "points": 35
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Marco Bozzano",
@@ -3852,29 +3758,15 @@
       },
       {
         "name": "Fernando Aguilar",
-        "points": 25,
+        "points": 0,
         "club": "-",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "14º",
-            "points": 25
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Ivan Tudela",
-        "points": 25,
+        "points": 0,
         "club": "-",
-        "realHistory": [
-          {
-            "date": "2025/2026",
-            "event": "3ª Prueba Autonómica",
-            "pos": "15º",
-            "points": 25
-          }
-        ]
+        "realHistory": []
       },
       {
         "name": "Julio García",
