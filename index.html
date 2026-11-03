@@ -1193,13 +1193,21 @@
             const yearData = allData[year] || allData['2026'] || {};
             currentData = (yearData[cat] || []).slice(); // copia para no mutar
 
+            // Puntos obtenidos en el Campeonato Absoluto (desempate)
+            const absolutoPts = p => (p.realHistory || [])
+                .filter(h => /Absoluto/i.test(h.event) && typeof h.points === 'number')
+                .reduce((s, h) => s + h.points, 0);
+
             // Top 10 RN siempre arriba, ordenados por nationalRank; resto por puntos
+            // Empate a puntos: más puntos en el Absoluto; si persiste, orden alfabético
             currentData.sort((a, b) => {
                 const aTop = a.isTop10Spain ? 1 : 0;
                 const bTop = b.isTop10Spain ? 1 : 0;
                 if (aTop !== bTop) return bTop - aTop; // top10 primero
                 if (aTop && bTop) return (a.nationalRank || 999) - (b.nationalRank || 999); // menor RN = mejor
-                return b.points - a.points; // resto por puntos
+                return (b.points - a.points)
+                    || (absolutoPts(b) - absolutoPts(a))
+                    || a.name.localeCompare(b.name, 'es');
             });
 
             document.getElementById('searchInput').value = '';
