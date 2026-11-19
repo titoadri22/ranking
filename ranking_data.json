@@ -1852,8 +1852,8 @@
         "name": "Adrian Revert",
         "points": 1180,
         "club": "Club Squash Algemesí",
-        "isTop10Spain": true,
-        "nationalRank": 10,
+        "isTop10Spain": false,
+        "nationalRank": 11,
         "realHistory": [
           {
             "date": "08-09 May 2026",
@@ -2130,7 +2130,7 @@
         "club": "Åsane Squash Klubb",
         "birthDate": "1994-05-15",
         "isTop10Spain": true,
-        "nationalRank": 8,
+        "nationalRank": 10,
         "realHistory": [
           {
             "date": "08-09 May 2026",
